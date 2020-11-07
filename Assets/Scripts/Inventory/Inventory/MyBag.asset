@@ -1,0 +1,267 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92487f064c319b43bfb7c44fb96ee74, type: 3}
+  m_Name: MyBag
+  m_EditorClassIdentifier: 
+  itemList:
+  - itemName: "\u4E09\u5DE1\u624B\u624E*\u4F20\u95FB"
+    itemImage: {fileID: 21300000, guid: 9fe14474d8d1a06479fffe7698a25852, type: 3}
+    itemHeld: 1
+    itemInfo: "\u4F20\u8BF4\u6709\u4E00\u4E2A\u5F02\u4E16\u754C\u7684\u4F5C\u5BB6\u540D\u4E3A\u534E\u8A00\u4E09\u5DE1\u3002\u4ED6\u6240\u5199\u4E4B\u4E8B\u5149\u602A\u9646\u79BB\uFF0C\u532A\u5937\u6240\u601D\uFF0C\u5B9E\u5728\u96BE\u4EE5\u8BA9\u4E16\u4EBA\u63A5\u6536\u3002\u8FD9\u672C\u4E66\u6709\u5341\u4E03\u7AE0\u6B8B\u5377\uFF0C\u968F\u7740\u98CE\u5439\u65E5\u6652\u548C\u65F6\u95F4\u7684\u6D17\u793C\uFF0C\u8FD9\u5341\u4E03\u7AE0\u5DF2\u6E10\u6E10\u7834\u65E7\uFF0C\u5E76\u5206\u6563\u5230\u4E16\u754C\u5404\u5730\u3002\u636E\u4F20\u8A00\u8FD9\u6837\u7684\u53E4\u7C4D\u90FD\u4F1A\u8574\u85CF\u5F02\u4E16\u754C\u80FD\u91CF\uFF0C\u53EF\u60DC\u5F88\u96BE\u9047\u5230\u4E86\uFF01"
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: "\u5C0F\u7834\u5251"
+    itemImage: {fileID: 21300000, guid: af50dc4fa7b6d314895d0f8c79adb4a5, type: 3}
+    itemHeld: 1
+    itemInfo: "\u4E00\u628A\u666E\u901A\u800C\u53C8\u6B8B\u7834\u7684\u5251\uFF0C\u53EA\u80FD\u8BF4\u804A\u80DC\u4E8E\u65E0\u4E86\uFF01"
+    equip: 0
+    health: 1
+    poisonResistance: 1
+    hitResistance: 1
+    magicResistance: 1
+    attack: 100
+    critRate: 1
+    critPower: 1
+    power: 1
+    magic: 1
+  - itemName: "\u53E3\u670D\u6DB2"
+    itemImage: {fileID: 21300000, guid: 095c8dab9946d7645a3cbd7d497beecf, type: 3}
+    itemHeld: 1
+    itemInfo: "\u84DD\u74F6\u7684\u66F4\u597D\u559D!"
+    equip: 0
+    health: 7
+    poisonResistance: 1
+    hitResistance: 1
+    magicResistance: 1
+    attack: 2
+    critRate: 2
+    critPower: 2
+    power: 2
+    magic: 2
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
+  - itemName: 
+    itemImage: {fileID: 0}
+    itemHeld: 0
+    itemInfo: 
+    equip: 0
+    health: 0
+    poisonResistance: 0
+    hitResistance: 0
+    magicResistance: 0
+    attack: 0
+    critRate: 0
+    critPower: 0
+    power: 0
+    magic: 0
