@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="AdsManager" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\AdsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseSingleton&lt;T&gt;" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\BaseSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventInfo&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\EventCenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EventInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="34.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\EventCenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EventCenter" Collapsed="true">
+    <Position X="10.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEBCAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\EventCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventCfg" Collapsed="true">
+    <Position X="33" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\EventCfg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoController" Collapsed="true">
+    <Position X="31.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAACCAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\MonoController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoMgr" Collapsed="true">
+    <Position X="12.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAASAAAAAAAAAAAAAgBACAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\MonoMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicMgr" Collapsed="true">
+    <Position X="14.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ACQABACAAAAMQIAAAAAACAgABAAAAABAAIAAAAAABAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\MusicMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyRandom" Collapsed="true">
+    <Position X="34.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\MyRandom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PathCfg" Collapsed="true">
+    <Position X="22.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEABAABADAACgIACBAABACAAAMAAIEAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\PathCfg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolData" Collapsed="true">
+    <Position X="20.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAYIAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\PoolMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolMgr" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAQIAAAAAAAAAQAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\PoolMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResMgr" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\ResMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScenesMgr" Collapsed="true">
+    <Position X="8" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAQAAACAAAAAAAAAAAAIAAAAAAQBA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\ScenesMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimerMgr" Collapsed="true">
+    <Position X="0.5" Y="16.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAIAAAAEAAIAAAAAAAAQAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\TimerMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true">
+    <Position X="24.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAMACAAAABBAAQAAAAAAAAAAAAAIAAAgAAAQQA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\TimerMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BasePanel" Collapsed="true">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAAAAAAAAIAAAAQAAAAAAAAAgEA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\UI\BasePanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager" Collapsed="true">
+    <Position X="17" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAUAACAAAAACggAAAAAAAAACAAAAgAAAQA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\UI\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TouchEX" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAIAAAAAABAAABAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\Utils\TouchEX.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TouchQutSideEx" Collapsed="true">
+    <Position X="27.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAgAAAAAAAAAAAAAACAAAAEAIAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\Utils\TouchQutSideEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityExtern" Collapsed="true">
+    <Position X="29.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\Utils\UnityExtern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Util" Collapsed="true">
+    <Position X="34.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAIAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\Utils\Util.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomb" Collapsed="true">
+    <Position X="33" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQEACQADCAAAAgAAAAwAAAEABIAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Bomb&amp;Door&amp;FX\Bomb\Bomb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Door" Collapsed="true">
+    <Position X="29.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAAACAAAAAAAAAABIAAAFAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Bomb&amp;Door&amp;FX\Door\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="beatFX" Collapsed="true">
+    <Position X="26" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\3.Scripts\Bomb&amp;Door&amp;FX\FX\beatFX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JumpFX" Collapsed="true">
+    <Position X="27.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\3.Scripts\Bomb&amp;Door&amp;FX\FX\JumpFX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Down" Collapsed="true">
+    <Position X="31.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Environment\Down.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Up" Collapsed="true">
+    <Position X="31.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Environment\Up.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UpWater" Collapsed="true">
+    <Position X="33" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Environment\UpWater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet" Collapsed="true">
+    <Position X="13" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIACADAAgAAAAAAAAAAAAEAAAAAEAAIAAAAACAI=</HashCode>
+      <FileName>Assets\3.Scripts\GunBullet\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GreenBirdTwo" Collapsed="true">
+    <Position X="12.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\GunBullet\GreenBirdTwo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GreenBullet" Collapsed="true">
+    <Position X="15.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\GunBullet\GreenBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBall" Collapsed="true">
+    <Position X="10.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\GunBullet\MagicBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RedBirdOne" Collapsed="true">
+    <Position X="10.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\GunBullet\RedBirdOne.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RedBullet" Collapsed="true">
+    <Position X="13" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\GunBullet\RedBullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shoot" Collapsed="true">
+    <Position X="11.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAIAABCEAAAAAAAAAAAAAAAAAAACAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\GunBullet\Shoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameSaveManager" Collapsed="true">
+    <Position X="24.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIACAAAAQAAAAAAACAAgABAJACAQABACAAAAAAEE=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\GameSaveManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inventory" Collapsed="true">
+    <Position X="31.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventoryManager" Collapsed="true">
+    <Position X="33" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACCAAAAQAAAAAAAACABAAAQABAAAAABACUA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\InventoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemData" Collapsed="true">
+    <Position X="34.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAAADhAAEAAAAAAAAQABECFAAQDEAAQCAAIBQBg=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemOnDrag" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAEAAAEBAEBAAAAIAACAAgAEAgAAAAQA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\ItemOnDrag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ItemOnWorld" Collapsed="true">
+    <Position X="22.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAACQAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\ItemOnWorld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveBag" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABABAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\MoveBag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Points" Collapsed="true">
+    <Position X="33" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\Points\Points.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Slot" Collapsed="true">
+    <Position X="22.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABBAAABAAAAAAAAAAAAAAQAAAARAAAAACAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\Slot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdsPrepare" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACEAAAAAAAIAAIABAAAAgBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\AdsPrepare.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BeatManager" Collapsed="true">
+    <Position X="27.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAUAAACEIAQAIAAMAAAAAAABAAQAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\BeatManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogButton" Collapsed="true">
+    <Position X="6.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAACAAACAAAAAAAAAAAABAEAEAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\DialogSystem\DialogButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogManager" Collapsed="true">
+    <Position X="26" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAARAQAAAAAAAAEAAAERAABEAAAAEAAAAAAAQEA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\DialogSystem\DialogManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogNpc1" Collapsed="true">
+    <Position X="5.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\DialogSystem\DialogNpc\DialogNpc1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TV" Collapsed="true">
+    <Position X="7.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\DialogSystem\DialogNpc\TV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogSystem" Collapsed="true">
+    <Position X="27.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAAAAAEAAIEEgAIAABAABEQAAAEEAAAIEBSAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\DialogSystem\DialogSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="22.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAEACAAAAAAAgQAggQAAABAAIgDAQEAIFAQAMA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalVolumeManager" Collapsed="true">
+    <Position X="29.5" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAECAAAQAAAAAAAAAAAABAAAAAAABAAAACAEg=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\GlobalVolumeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoginInit" Collapsed="true">
+    <Position X="29.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\LoginInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInfoManager" Collapsed="true">
+    <Position X="27.75" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAQAAABAgAAAAAAAAAAAAAAAAABAAAAiQAAAAAAAIEA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\PlayerInfo\PlayerInfoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraUpDownController" Collapsed="true">
+    <Position X="20.75" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAAAAAAIgAAAAAAAABAAQAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\Room\CameraUpDownController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Room" Collapsed="true">
+    <Position X="24.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAAAgAAACAAAGAAAgACEAEECFAAAAgJEAAAAEQAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\Room\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WallType" Collapsed="true">
+    <Position X="22.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAQAAAgKAQAIBAAAAABAAAAAFAAAAAAARAE=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\Room\RoomGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomGenerator" Collapsed="true">
+    <Position X="26" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBQBAAAQACCAYAAkACKEDEAAAAAAAgAAAAAwAEAAIAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\Room\RoomGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WallMap" Collapsed="true">
+    <Position X="20.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\Room\WallMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArmourHit" Collapsed="true">
+    <Position X="24.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAACAAACQAAEgEEAEAAAAAAIAkAYAACEAAAgEAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\ArmourHit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BodyHit" Collapsed="true">
+    <Position X="29.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggQEQiAAIiAAABgAEAMBgAAwA0AlAAAFAESABAIAAQg=</HashCode>
+      <FileName>Assets\3.Scripts\Players\BodyHit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BodyInit" Collapsed="true">
+    <Position X="31.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\BodyInit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BossShenYuanFashi" Collapsed="true">
+    <Position X="12.25" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAABAABAAAAAAAAAAAAAAAAAAAAAAICAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Boss\BossShenYuanFashi.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Bald" Collapsed="true">
+    <Position X="14.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\Enemy\Bald.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BigGuy" Collapsed="true">
+    <Position X="1" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAABAAAAQAEAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\Enemy\BigGuy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Captain" Collapsed="true">
+    <Position X="3.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACAAASAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\Enemy\Captain.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Cucumber" Collapsed="true">
+    <Position X="5.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\Enemy\Cucumber.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Slime" Collapsed="true">
+    <Position X="7.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACQAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\Enemy\Slime.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Whale" Collapsed="true">
+    <Position X="10" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAiAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\Enemy\Whale.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAACHAACBACg4APAQCABEAAFAUwYYAAAACBpCQQHg=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttackState" Collapsed="true">
+    <Position X="0.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\FSM\AttackState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBaseState" Collapsed="true">
+    <Position X="1.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\FSM\EnemyBaseState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatrolState" Collapsed="true">
+    <Position X="2.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\FSM\PatrolState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HitPoint" Collapsed="true">
+    <Position X="29.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAADAAgFAAAAAAgAAAAEAEAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Enemy\HitPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController" Collapsed="true">
+    <Position X="34.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AASAAACAAAAAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Player\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerAnimation" Collapsed="true">
+    <Position X="24.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAACAAAAkAAAAAAAAAAAAAAJAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Player\PlayerAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQCACBAgiEAAIAEAAAAAAEAApAAAdIAAEEAAQASKAg=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlayerUpDownController" Collapsed="true">
+    <Position X="33" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Player\PlayerUpDownController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInfomation" Collapsed="true">
+    <Position X="29.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAAAQAAAAAAAAAAICAVAAQCAAAQCAAABQBg=</HashCode>
+      <FileName>Assets\3.Scripts\Players\PlayerInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillTable" Collapsed="true">
+    <Position X="34.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\PlayerInfomation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playerstate" Collapsed="true">
+    <Position X="31.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAYAAAAAACAAAAAAIAEAAASBAABAAQCAAQAAQAIAAEI=</HashCode>
+      <FileName>Assets\3.Scripts\Players\Playerstate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Setup" Collapsed="true">
+    <Position X="27.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\Setup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\SkillTree\SkillButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SkillData" Collapsed="true">
+    <Position X="31.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAACAAEAAAAAAEQAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\SkillTree\SkillData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillManager" Collapsed="true">
+    <Position X="33" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQABAAoQAAAABAEhAAAAAAJAAABAAgAAgAAAEEA=</HashCode>
+      <FileName>Assets\3.Scripts\SkillTree\SkillManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillTree" Collapsed="true">
+    <Position X="20.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\SkillTree\SkillTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimationManager" Collapsed="true">
+    <Position X="22.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAEBAAAAAQCAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Animations\AnimationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamageNum" Collapsed="true">
+    <Position X="24.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQQAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Animations\DamageNum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelLoader" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAABAAAAAEAABAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Animations\LevelLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuTong" Collapsed="true">
+    <Position X="22.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Animations\PuTong.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BagPanel" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAQAQDQAAEAQAQAAgAAAAAAAAAAABAAABCAQCAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\BagPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BossHealthBar" Collapsed="true">
+    <Position X="15.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAACAgAAAAAAAAAAAAAAAAACAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\BossHealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonInHome" Collapsed="true">
+    <Position X="20.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAKAABAAgAAAAAABAAAAAAAAAAQAAAEAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\ButtonInHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Controller" Collapsed="true">
+    <Position X="24.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQCABAAAiAAUAAABEAAAAAAAAIAQACBAAEAgAEAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogPanel" Collapsed="true">
+    <Position X="29.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\DialogPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOverPanel" Collapsed="true">
+    <Position X="31.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAAAAAAAQAAAAEAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\GameOverPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBar" Collapsed="true">
+    <Position X="33.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\HealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InfoPanel" Collapsed="true">
+    <Position X="36" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQJiBFAQCACAAEAQAPALCCAkAFQAAKAQQQiIAwRShw=</HashCode>
+      <FileName>Assets\3.Scripts\UI\InfoPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadSceneSliderPanel" Collapsed="true">
+    <Position X="38.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\LoadSceneSliderPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAIIAABAAABAAAAAAFAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapPanel" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAECAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\MapPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenInfo" Collapsed="true">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAgAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\OpenInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseButton" Collapsed="true">
+    <Position X="13.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\PauseButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu" Collapsed="true">
+    <Position X="18" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABCAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SettingsPanel" Collapsed="true">
+    <Position X="22.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAACAAAQAAAAAAAAgAEAQAAAAAAQAAACAAAQQ=</HashCode>
+      <FileName>Assets\3.Scripts\UI\SettingsPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillTreePanel" Collapsed="true">
+    <Position X="27" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABACIAAAAAJAEgAAAAAAAAAABAAgAAgAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\SkillTreePanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChangAn" Collapsed="true">
+    <Position X="24.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAEAgAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Utils\ChangAn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBarSlider" Collapsed="true">
+    <Position X="27.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAGAAAAAAAAAAAAAAAAAAAIAIQABAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Utils\HealthBarSlider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnImage" Collapsed="true">
+    <Position X="20.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Utils\OnImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoystickPlayerExample" Collapsed="true">
+    <Position X="24.25" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAAAAAAAAAAAAAQAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Examples\JoystickPlayerExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoystickSetterExample" Collapsed="true">
+    <Position X="26" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAAAAAAAAAAAAAAAACAAAAAQAQAQAACAAEIAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Examples\JoystickSetterExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Joystick" Collapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACABACIACRICAAEACBAASICAAEAADAKAQQCCAEAIAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DynamicJoystick" Collapsed="true">
+    <Position X="0.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAACAIAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FixedJoystick" Collapsed="true">
+    <Position X="3" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FloatingJoystick" Collapsed="true">
+    <Position X="5.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VariableJoystick" Collapsed="true">
+    <Position X="7.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAKAACAIAgAAAAAAAAAAAAAAAgAAACIAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IEventInfo" Collapsed="true">
+    <Position X="22.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\EventCenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IDamageable" Collapsed="true">
+    <Position X="20.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Players\IDamageable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="E_UI_Layer" Collapsed="true">
+    <Position X="24.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAEAAAAAAAAAoIAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\UI\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ItemType" Collapsed="true">
+    <Position X="26" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIABAAAAAAAAACAQAAAAAAAAAAAAAAAAAAIAQAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Inventory\Item.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BeatDir" Collapsed="true">
+    <Position X="22.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAEAAAAAAAAAAABAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\Manager\BeatManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AxisOptions" Collapsed="true">
+    <Position X="20.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="JoystickType" Collapsed="true">
+    <Position X="27.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

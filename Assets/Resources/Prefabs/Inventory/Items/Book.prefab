@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2020176267
-  m_SortingLayer: 3
+  m_SortingLayerID: 246366919
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: ddf5aa7d44ae6174f88e6376f5e1e466, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -146,9 +146,9 @@ MonoBehaviour:
   thisItem:
     itemName: "\u4E09\u5DE1\u624B\u624E*\u4F20\u95FB"
     itemImage: {fileID: 21300000, guid: 9fe14474d8d1a06479fffe7698a25852, type: 3}
-    itemHeld: 0
+    itemHeld: 1
     itemInfo: "\u4F20\u8BF4\u5728\u53E6\u4E00\u4E2A\u4E16\u754C\uFF0C\u6709\u4E00\u4E2A\u4F5C\u5BB6\u540D\u4E3A\u534E\u8A00\u4E09\u5DE1\uFF0C\u4ED6\u6240\u5199\u4E4B\u4E8B\u5149\u602A\u9646\u79BB\uFF0C\u532A\u5937\u6240\u601D\uFF0C\u5B9E\u5728\u96BE\u4EE5\u8BA9\u4E16\u4EBA\u63A5\u6536\uFF0C\u8FD9\u672C\u4E66\u6709\u5341\u4E03\u7AE0\u6B8B\u5377\uFF0C\u968F\u7740\u98CE\u5439\u65E5\u6652\u548C\u65F6\u95F4\u7684\u6253\u78E8\uFF0C\u8FD9\u5341\u4E03\u7AE0\u5DF2\u6E10\u6E10\u7834\u65E7\uFF0C\u800C\u53C8\u5206\u6563\u5230\u4E16\u754C\u5404\u5730\uFF0C\u5982\u4ECA\u770B\u6765\u662F\u5F88\u96BE\u627E\u5230\u4E86\u3002\u636E\u4F20\u8A00\u8FD9\u6837\u7684\u53E4\u7C4D\u90FD\u4F1A\u8574\u85CF\u9065\u8FDC\u7684\u5F02\u4E16\u754C\u80FD\u91CF\uFF0C\u53EF\u60DC\u5F88\u96BE\u9047\u5230\u4E86"
-    equip: 0
+    types: 5
     health: 0
     poisonResistance: 0
     hitResistance: 0
@@ -158,4 +158,13 @@ MonoBehaviour:
     critPower: 0
     power: 0
     magic: 0
-  playerInventory: {fileID: 0}
+    speed: 0
+    skillId: 0
+    castRange: 0
+    cooldown: 0
+    damageRange: 0
+    flySpeed: 0
+    radius: 0
+    duringTime: 0
+    trace: 0
+  playerInventory: {fileID: 11400000, guid: b3e91faa686e4864e812120c4918259c, type: 2}

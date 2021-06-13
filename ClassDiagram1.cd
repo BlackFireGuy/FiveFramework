@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Panel类">
+    <Position X="12" Y="0.75" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="BasePanel">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAAAAAAAAAAAAIAAAAQAAAAAAAAAgEA=</HashCode>
+      <FileName>Assets\3.Scripts\Base\UI\BasePanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelLoader">
+    <Position X="11.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAABAAAAAEAABAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Animations\LevelLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BagPanel">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <InheritanceLine Type="BasePanel" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="6.062" Y="8.906" />
+        <Point X="6.062" Y="9" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQACAQAQDQAAEAQAQAAgAAAAAAAAAAABAAABCAQCAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\BagPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BossHealthBar">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAACAgAAAAAAAAAAAAAAAAACAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\BossHealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonInHome">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <InheritanceLine Type="BasePanel" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="3.375" />
+        <Point X="13.938" Y="3.375" />
+        <Point X="13.938" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAKAABAAgAAAAAABAAAAAAAAAAQAAAEAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\ButtonInHome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Controller">
+    <Position X="3.5" Y="9" Width="1.5" />
+    <InheritanceLine Type="BasePanel" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="4.188" Y="8.906" />
+        <Point X="4.188" Y="9" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAQCABAAAiAAUAAABEAAAAAAAAIAQACBAAEAgAEAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogPanel">
+    <Position X="15.25" Y="9" Width="1.5" />
+    <InheritanceLine Type="BasePanel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="16" Y="8.906" />
+        <Point X="16" Y="9" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\DialogPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOverPanel">
+    <Position X="17.25" Y="9" Width="1.5" />
+    <InheritanceLine Type="BasePanel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="18" Y="8.906" />
+        <Point X="18" Y="9" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAAAAAAAQAAAAEAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\GameOverPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBar">
+    <Position X="11.25" Y="9" Width="1.5" />
+    <InheritanceLine Type="BasePanel" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="12.062" Y="8.906" />
+        <Point X="12.062" Y="9" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\HealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InfoPanel">
+    <Position X="19.25" Y="3.75" Width="1.5" />
+    <InheritanceLine Type="BasePanel" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="3.375" />
+        <Point X="20" Y="3.375" />
+        <Point X="20" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAQJiBFAQCACAAEAQAPALCCAkAFQAAKAQQQiIAwRShw=</HashCode>
+      <FileName>Assets\3.Scripts\UI\InfoPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadSceneSliderPanel">
+    <Position X="8.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\LoadSceneSliderPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main">
+    <Position X="15.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAIIAABAAABAAAAAAFAAACAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MapPanel">
+    <Position X="9" Y="9.5" Width="1.5" />
+    <InheritanceLine Type="BasePanel" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="9.688" Y="8.906" />
+        <Point X="9.688" Y="9.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAECAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\MapPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenInfo">
+    <Position X="7.25" Y="9" Width="1.5" />
+    <InheritanceLine Type="BasePanel" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="7.875" Y="8.906" />
+        <Point X="7.875" Y="9" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAgAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\OpenInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseButton">
+    <Position X="13.25" Y="9" Width="1.5" />
+    <InheritanceLine Type="BasePanel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="11" Y="2.872" />
+        <Point X="11" Y="8.906" />
+        <Point X="14" Y="8.906" />
+        <Point X="14" Y="9" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\PauseButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu">
+    <Position X="17.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABCAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SettingsPanel">
+    <Position X="3.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAACAAAQAAAAAAAAgAEAQAAAAAAQAAACAAAQQ=</HashCode>
+      <FileName>Assets\3.Scripts\UI\SettingsPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillTreePanel">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABACIAAAAAJAEgAAAAAAAAAABAAgAAgAAAAAA=</HashCode>
+      <FileName>Assets\3.Scripts\UI\SkillTreePanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

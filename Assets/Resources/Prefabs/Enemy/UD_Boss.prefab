@@ -107,9 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab29b85053a529469b2f571df47b909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   bombAvilable: 1
   isPlayer: 0
+  isAttacked: 0
   damageCanvas: {fileID: 3457783011772165755, guid: 2f4cc5ed8e97ebf408e5687fb7165ffe,
     type: 3}
 --- !u!58 &8887594053824332952

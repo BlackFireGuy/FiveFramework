@@ -11,6 +11,10 @@ TagManager:
   - CheckArea
   - Npc
   - HIttedPoint
+  - Other
+  - Beat
+  - Sword
+  - Hammer
   layers:
   - Default
   - TransparentFX
@@ -31,8 +35,8 @@ TagManager:
   - Door
   - DialogNpc
   - MobileController
-  - 
-  - 
+  - Collder
+  - Wall
   - 
   - 
   - 
@@ -62,4 +66,13 @@ TagManager:
     locked: 0
   - name: NPC
     uniqueID: 2020176267
+    locked: 0
+  - name: Gift
+    uniqueID: 246366919
+    locked: 0
+  - name: Player
+    uniqueID: 157812041
+    locked: 0
+  - name: FX
+    uniqueID: 3003548419
     locked: 0

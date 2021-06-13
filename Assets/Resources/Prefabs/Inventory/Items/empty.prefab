@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2020176267
-  m_SortingLayer: 3
+  m_SortingLayerID: 246366919
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -128,7 +128,7 @@ MonoBehaviour:
     itemInfo: '
 
 '
-    equip: 0
+    types: 0
     health: 0
     poisonResistance: 0
     hitResistance: 0
@@ -138,4 +138,13 @@ MonoBehaviour:
     critPower: 0
     power: 0
     magic: 0
+    speed: 0
+    skillId: 0
+    castRange: 0
+    cooldown: 0
+    damageRange: 0
+    flySpeed: 0
+    radius: 0
+    duringTime: 0
+    trace: 0
   playerInventory: {fileID: 11400000, guid: 61a56f59b13d3304fbe9444aa79eb432, type: 2}

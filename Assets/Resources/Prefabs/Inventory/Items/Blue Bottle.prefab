@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4235187348111502784}
   - component: {fileID: 4235187348111502785}
   - component: {fileID: 4235187348111502399}
+  - component: {fileID: 7326954867957900591}
   m_Layer: 0
   m_Name: Blue Bottle
   m_TagString: Untagged
@@ -52,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1132d3c37beb0884086508f896fb56ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2020176267
-  m_SortingLayer: 3
+  m_SortingLayerID: 246366919
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 095c8dab9946d7645a3cbd7d497beecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -148,7 +149,7 @@ MonoBehaviour:
     itemImage: {fileID: 21300000, guid: 095c8dab9946d7645a3cbd7d497beecf, type: 3}
     itemHeld: 1
     itemInfo: "\u84DD\u74F6\u7684\u66F4\u597D\u559D!"
-    equip: 0
+    types: 3
     health: 7
     poisonResistance: 1
     hitResistance: 1
@@ -158,4 +159,33 @@ MonoBehaviour:
     critPower: 2
     power: 2
     magic: 2
-  playerInventory: {fileID: 11400000, guid: 61a56f59b13d3304fbe9444aa79eb432, type: 2}
+    speed: 0
+    isEquip: 0
+    skillId: 0
+    castRange: 0
+    cooldown: 0
+    damageRange: 0
+    flySpeed: 0
+    radius: 0
+    duringTime: 0
+    trace: 0
+  playerInventory: {fileID: 11400000, guid: d3106a5eb9c085f459111425d7a5f5b3, type: 2}
+--- !u!95 &7326954867957900591
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4235187348111502788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3442003007db26a44b2c95d7ae938f09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
