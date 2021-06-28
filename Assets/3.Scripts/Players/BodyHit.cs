@@ -90,11 +90,11 @@ public class BodyHit : MonoBehaviour
                 isAttacked = true;
                 MonoMgr.GetInstance().StartCoroutine(IsAttackCo());
                 //2生成效果
-                PoolMgr.GetInstance().GetObj(PathCfg.PATH_FX + "beat", (o) => { o.transform.position = beatPos; });
+                PoolMgr.GetInstance().GetObj(PathCfg.PATH_FX + "beat1", (o) => { o.transform.position = beatPos; });
                 GlobalVolumeManager.instance.Shake();
                 MusicMgr.GetInstance().PlaySound("BoxBeatNormal");
                 //更新受击时间
-                BeatManager.instance.attaacktime = Time.time;
+                BeatManager.instance.attacktime = Time.time;
                 //3震动
                 Cinemachine.CinemachineCollisionImpulseSource MyInpulse = this.GetComponent<Cinemachine.CinemachineCollisionImpulseSource>();
                 if (MyInpulse != null)
@@ -127,6 +127,7 @@ public class BodyHit : MonoBehaviour
     private void FixedUpdate()
     {
         PhysicsCheck();
+        
     }
     private void Update()
     {
@@ -140,11 +141,12 @@ public class BodyHit : MonoBehaviour
         {
             beAttacking = false;
         }
+        ani.SetBool("IsAgainstWall", isAgainstwall);
     }
     void PhysicsCheck()
     {
         isGround = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);//圆检测
-        isAgainstwall = Physics2D.OverlapCircle(wallCheck.position, checkRadius, wallLayer);//圆检测
+        isAgainstwall = Physics2D.OverlapCircle(wallCheck.position, checkRadius+0.4f, wallLayer);//圆检测
 
     }
     public void Hitted(int _otherDamage)
@@ -312,7 +314,7 @@ public class BodyHit : MonoBehaviour
     public void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
-        Gizmos.DrawWireSphere(wallCheck.position, checkRadius);
+        Gizmos.DrawWireSphere(wallCheck.position, checkRadius + 0.4f);
     }
     IEnumerator IsAttackCo()
     {

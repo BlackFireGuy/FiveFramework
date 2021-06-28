@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DialogButton : MonoBehaviour
 {
+    public GameObject Text;
     public GameObject Button;
     //public GameObject talkUI;
     [Header("文本文件")]
@@ -19,7 +20,15 @@ public class DialogButton : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //可以计划在这里进行UDialogPrefab的赋值
             Button.SetActive(true);
+            if(Text != null)
+                Text.SetActive(true);
+            else
+            {
+                //恢复默认的DIalogUI
+                DialogManager.instance.SetDefaultDialogUI();
+            }
             DialogManager.instance.isButtonActive = true;
         }
             
@@ -30,6 +39,9 @@ public class DialogButton : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Button.SetActive(false);
+            if (Text != null)
+                Text.SetActive(false);
+            DialogManager.instance.Dialog = null;
             DialogManager.instance.isButtonActive = false;
         }
             
@@ -41,6 +53,16 @@ public class DialogButton : MonoBehaviour
     {
         if (Button.activeSelf && (Input.GetKeyDown(KeyCode.R)|| DialogManager.instance.isattack))
         {
+            Button.SetActive(false);
+            //可以计划在这里进行UDialogPrefab的赋值
+            if (Text != null)
+            {
+                //UIManager.GetInstance().HidePanel("Dialog Panel");
+                Text.SetActive(true);
+                
+            }
+            else
+                DialogManager.instance.SetDefaultDialogUI();
             //talkUI.SetActive(true);
             DialogManager.instance.SetDialogInfo(textfile, face01, face02, Show);
         }

@@ -5,6 +5,7 @@ using UnityEngine.Advertisements;
 
 public class AdsManager : BaseSingleton<AdsManager>
 {
+    
     string placementID = "rewardedVideo";
     public void ShowRewardAds()
     {

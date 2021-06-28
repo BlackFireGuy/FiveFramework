@@ -21,7 +21,7 @@ public class DialogManager : MonoBehaviour
 
     [Header("运行时分配")]
     public GameObject Dialog;
-
+    public GameObject DialogMachine;
     TextAsset textfile;
 
     Sprite face01, face02;
@@ -59,6 +59,11 @@ public class DialogManager : MonoBehaviour
     public Sprite Face02
     {
         get { return face02; }
+    }
+
+    public void SetDefaultDialogUI()
+    {
+        Dialog = DialogMachine;
     }
 
 }

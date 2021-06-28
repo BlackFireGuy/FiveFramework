@@ -8,7 +8,7 @@ public class MusicMgr : BaseSingleton<MusicMgr>
     //唯一的背景音乐组件
     private AudioSource bkMusic = null;
     //音乐大小
-    private float bkValue = 1f;
+    private float bkValue = 0.8f;
     //音效大小
     private float soundValue = 1f;
     //音效依附对象

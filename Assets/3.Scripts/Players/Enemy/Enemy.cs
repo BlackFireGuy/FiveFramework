@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public float armor;
     public bool isBoss;
+    public int exp;
     [Header("Movement")]
     public float speed;
     public Transform pointA, pointB;
@@ -105,6 +106,8 @@ public class Enemy : MonoBehaviour
             //掉落物体
             if(!isGifted)
                 GiveGifts();
+            //给玩家增加经验
+            EventCenter.GetInstance().EventTrigger(EventCfg.ADD_EXP, exp);
             return;
         }
         currentState.OnUpdate(this);

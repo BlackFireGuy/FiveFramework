@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoginInit : MonoBehaviour
 {
-    public void Start()
+    public void Awake()
     {
         //1先初始化UI
         UIManager.GetInstance().HideAllPanel();

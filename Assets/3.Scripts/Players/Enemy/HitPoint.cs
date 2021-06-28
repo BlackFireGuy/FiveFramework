@@ -4,7 +4,7 @@ using UnityEngine;
 public class HitPoint : MonoBehaviour
 {
     [Header("伤害值")]
-    public int damage;
+    public float damage;
     public bool bombAvilable;
     int dir;
     public bool isPlayer;
@@ -22,6 +22,14 @@ public class HitPoint : MonoBehaviour
     private void Update()
     {
         TimerMgr.instance.Loop(Time.deltaTime);
+
+        if (!isPlayer)//挂载在敌人身上
+        {
+            if (this.transform.parent.GetComponent<Enemy>() == null) return;
+            damage = this.transform.parent.GetComponent<Enemy>().armor;
+        }
+        
+            
     }
 
 
@@ -91,21 +99,27 @@ public class HitPoint : MonoBehaviour
             }
             if (other.CompareTag("Door"))
             {
-                other.GetComponent<Door>().OpenDoor();
+                //other.GetComponent<Door>().OpenDoor();
             }
         }
         
     }
 
-    void CallBack()
+    /*void CallBack()
     {
         isAttacked = false;
         //t.Stop();
-    }
+    }*/
 
     IEnumerator IsAttackCo()
     {
         yield return new WaitForSeconds(0.1f);
         isAttacked = false;
+    }
+    //根据激活时攻击的状态分配对应的攻击特效
+    private void OnEnable()
+    {
+        if (transform == null) return;
+        PoolMgr.GetInstance().GetObj(PathCfg.PATH_FX + "beat2", (o) => { o.transform.position = transform.position; });
     }
 }

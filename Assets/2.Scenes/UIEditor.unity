@@ -1034,117 +1034,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2143563355
-GameObject:
+--- !u!1001 &3562399911442649902
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2143563357}
-  - component: {fileID: 2143563356}
-  - component: {fileID: 2143563358}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2143563356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143563355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b426c957f31d6f24a9019f047706bc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: "\u6492\u5927\u5927"
-  description: "\u7B2C\u4E00\u4E2A\u73A9\u5BB6"
-  playerLevel: 1
-  maxLevel: 10
-  currentExp: 0
-  nextlevelExp: 
-  currentHp: 111
-  currentMp: 222
-  maxHp: 222
-  maxMp: 222
-  attack: 100
-  defense: 10
---- !u!4 &2143563357
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143563355}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2143563358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143563355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3235e7bc6a35b194ebfec46851b8d591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info:
-    points: 0
-    face: 
-    age: 0
-    playTime: 0
-    health: 0
-    poisonResistance: 0
-    hitResistance: 0
-    magicResistance: 0
-    attack: 0
-    critRate: 0
-    critPower: 0
-    power: 0
-    magic: 0
-    speed: 0
-    pastSucess: 0
-    frontSucess: 0
-  infoItemData:
-    itemName: 
-    itemImage: {fileID: 0}
-    itemHeld: 0
-    itemInfo: 
-    types: 0
-    health: 0
-    poisonResistance: 0
-    hitResistance: 0
-    magicResistance: 0
-    attack: 0
-    critRate: 0
-    critPower: 0
-    power: 0
-    magic: 0
-    speed: 0
-    isEquip: 0
-    skillId: 0
-    castRange: 0
-    cooldown: 0
-    damageRange: 0
-    flySpeed: 0
-    radius: 0
-    duringTime: 0
-    trace: 0
-  playTime: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172595, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562399910725172597, guid: f6d3a9bfe18058f4fb8fa7f46e288934,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerInfoManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6d3a9bfe18058f4fb8fa7f46e288934, type: 3}
 --- !u!1001 &5618767459489795499
 PrefabInstance:
   m_ObjectHideFlags: 0

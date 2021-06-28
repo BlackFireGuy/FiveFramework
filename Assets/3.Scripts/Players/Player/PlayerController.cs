@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour, IDamageable
     private Animator ani;
     private ArmourHit ahit;
     private BodyHit bhit;
-    private  FloatingJoystick joystick;
+    private FloatingJoystick joystick;
     private HealthBarSlider healthBar;
-
+    
 
     public float swimSpeed = 1;
     public float speed;
@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour, IDamageable
     public bool isUpDown;//是否是俯视视角移动
 
     [Header("玩家状态")]
-    public float health;
+    //public float health;
     public bool isDead;
 
     [Header("状态标识")]
     public bool canJump;
-
+    int JumpNum;
     [Header("动作特效")]
     public GameObject jumpFX;
     public GameObject landFX;
@@ -47,11 +47,11 @@ public class PlayerController : MonoBehaviour, IDamageable
         bhit = GetComponent<BodyHit>();
         joystick = FindObjectOfType<FloatingJoystick>();
         healthBar = GetComponentInChildren<HealthBarSlider>();
-        
+
         GameManager.instance.IsPlayer(this);//告诉游戏管理这我就是玩家
         //初始化玩家血量
-        health = GameManager.instance.LoadHealth();
-        healthBar.maxHp = health;
+        /*health = GameManager.instance.LoadHealth();
+        healthBar.maxHp = health;*/
         //检测是否装备了技能,.是则装备
         for (int i = 0; i < inventorySkill.itemList.Count; i++)
         {
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour, IDamageable
             {
                 PlayerInfoManager.instance.infoItemData = inventorySkill.itemList[i];
                 //PoolMgr.GetInstance().GetObj(SkillTable.skillpath[inventorySkill.itemList[i].skillId], SkillInit);
-               
+
                 GameObject obj = ResMgr.GetInstance().Load<GameObject>(SkillTable.skillpath[inventorySkill.itemList[i].skillId]);
                 SkillInit(obj);
                 GameManager.instance.isSkillShoot = true;
@@ -67,22 +67,26 @@ public class PlayerController : MonoBehaviour, IDamageable
         }
 
     }
-    
+
     //死亡不进行控制
     void Update()
     {
         ani.SetBool("dead", isDead);
-
+        if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
         if (isDead) return;
         if (bhit.beAttacking) return;
         if (joystick == null)
             joystick = FindObjectOfType<FloatingJoystick>();
+
+        healthBar.maxHp = PlayerInfoManager.instance.info.maxHp;
+        healthBar.hp = PlayerInfoManager.instance.info.currentHp;
 
     }
     // 死亡或者失控则不进行控制
     //固定时长执行，跟物理有关的
     private void FixedUpdate()
     {
+        if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
         //是否死亡
         if (isDead)
         {
@@ -90,20 +94,73 @@ public class PlayerController : MonoBehaviour, IDamageable
             return;
         }
         //是否失控
-        if (bhit.beAttacking) return;
+        if (bhit.beAttacking||BeatManager.instance.isAttacking) return;
 
         MoveController();
+
+        //编辑器下调试
+        if (bhit.isGround||bhit.isAgainstwall)
+        {
+            JumpNum = 0;
+            canJump = true;
+        }
+        MovePC();
     }
 
 
     //--------------------------------------------------------------------------
+    void MovePC()
+    {
+        
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (horizontalInput > 0)
+        {
+            horizontalInput = 1;
+            BeatManager.instance.playerForwardDir = 1;
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            healthBar.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        if (horizontalInput < 0)
+        {
+            horizontalInput = -1;
+            BeatManager.instance.playerForwardDir = -1;
+            transform.eulerAngles = new Vector3(0, 180, 0);
+            //血条不动
+            healthBar.transform.localEulerAngles = new Vector3(0, 180, 0);
+        }
+        
+
+
+
+        if (Input.GetKeyDown("space"))
+        {
+            
+            if (canJump)
+            {
+                JumpNum = 0;
+                ani.SetTrigger("jump");
+            }
+            else
+            {
+                if(JumpNum < 2)
+                {
+                    ani.SetTrigger("jump");
+                    
+                }
+            }
+        }
+
+        if (horizontalInput < 0.0001f && horizontalInput > -0.0001f) return;
+        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+
+    }
     //玩家移动动作
     void MoveController()
     {
 
-        ani.SetFloat("test", Input.GetAxis("Horizontal"));
+        //ani.SetFloat("test", Input.GetAxis("Horizontal"));
         //操作杆
-        if (joystick != null)
+        if (joystick != null && BeatManager.instance.isAttacking == false)
         {
             float horizontalInput = joystick.Horizontal;
             if (horizontalInput > 0)
@@ -128,19 +185,38 @@ public class PlayerController : MonoBehaviour, IDamageable
     //玩家跳跃动作
     public void JumpController()
     {
+        if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
         if (joystick != null)
         {
-            if (bhit.isGround) canJump = true;
+            if (bhit.isGround||bhit.isAgainstwall) canJump = true;
+            
             if (canJump)
             {
+                JumpNum = 0;
                 ani.SetTrigger("jump");
+            }
+            else
+            {
+                if (JumpNum < 2)
+                {
+                    ani.SetTrigger("jump");
+
+                }
             }
         }
     }
     // 玩家攻击动作(除受伤外）
     public void Attack()
     {
+        if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
         if (isDead) return;
+
+        if (DialogManager.instance.isButtonActive)
+        {
+
+            return;
+        }
+
         if (Time.time > nextAttack)
         {
             //这里可以用缓存池和
@@ -168,15 +244,17 @@ public class PlayerController : MonoBehaviour, IDamageable
         {
             MusicMgr.GetInstance().PlaySound("hurt");
 
-            health -= damage;
-            if (health < 1)
+            float temp = (damage - PlayerInfoManager.instance.info.hitResistance) < 0 ? 1 : (damage - PlayerInfoManager.instance.info.hitResistance);
+            PlayerInfoManager.instance.info.currentHp -= temp;
+            //health -= damage;
+            if (PlayerInfoManager.instance.info.currentHp < 1)
             {
-                health = 0;
+                PlayerInfoManager.instance.info.currentHp = 0;
                 isDead = true;
             }
             ani.SetTrigger("hit");
 
-            healthBar.hp = health;
+            //healthBar.hp = health;
         }
     }
 
@@ -191,10 +269,15 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     public void Jump()
     {
+
+        JumpNum++;
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         canJump = false;
         jumpFX.SetActive(true);
         jumpFX.transform.position = transform.position + new Vector3(0, -0.45f, 0);
-        
+
     }
+    
+
+
 }

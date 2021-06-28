@@ -86,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110038618}
   - component: {fileID: 1110038619}
+  - component: {fileID: 9179705744990316804}
   m_Layer: 0
   m_Name: PlayerInfoManager
   m_TagString: Untagged
@@ -162,6 +163,30 @@ MonoBehaviour:
     duringTime: 0
     trace: 0
   playTime: 0
+--- !u!114 &9179705744990316804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110038617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b426c957f31d6f24a9019f047706bc2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: "\u6492\u5927\u5927"
+  description: "\u7B2C\u4E00\u4E2A\u73A9\u5BB6"
+  playerLevel: 1
+  maxLevel: 10
+  currentExp: 0
+  nextlevelExp: 
+  currentHp: 111
+  currentMp: 222
+  maxHp: 222
+  maxMp: 222
+  attack: 100
+  defense: 10
 --- !u!1 &137461865759736544
 GameObject:
   m_ObjectHideFlags: 0

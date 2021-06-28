@@ -62,7 +62,7 @@ public class ScenesMgr : BaseSingleton<ScenesMgr>
         //可以得到场景加载的进度
         while (!ao.isDone)
         {
-            //事件中心向外分发进度情况 外面想用就用
+            //触发事件，事件中心向外分发进度情况 外面想用就用
             EventCenter.GetInstance().EventTrigger(EventCfg.SCENE_LOADASY_PROCESS,ao.progress);
             //这里面去更新进度条
             progress = ao.progress/0.9f;

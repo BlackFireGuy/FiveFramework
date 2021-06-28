@@ -117,6 +117,8 @@ public class DialogSystem : MonoBehaviour
     private void ExitDialog()
     {
         this.gameObject.SetActive(false);
+        //UIManager.GetInstance().HidePanel("Dialog Panel");
+        //UIManager.GetInstance().ShowPanel<DialogPanel>("Dialog Panel", E_UI_Layer.Mid, null);
         index = 0;
     }
 

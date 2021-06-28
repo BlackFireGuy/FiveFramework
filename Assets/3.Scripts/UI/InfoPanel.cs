@@ -231,6 +231,7 @@ public class InfoPanel : BasePanel
 
         //格式化显示当前时间
         //time.text = string.Format("{0:D2}:{1:D2}:{2:D2} " + "{3:D4}/{4:D2}/{5:D2}", hour, minute, second, year, month, day);
+        if (time == null) return;
         time.text = string.Format("{0:D2}:{1:D2} ", hour, minute);
 #if UNITY_EDITOR
         //Debug.Log("W now " + System.DateTime.Now);     //当前时间（年月日时分秒）
@@ -244,25 +245,25 @@ public class InfoPanel : BasePanel
         //---------------
         playTime.text = PlayerInfoManager.instance.info.playTime.ToString();
 
-        playerName.text = Playerstate.instance.playerName;
-        level.text = Playerstate.instance.playerLevel.ToString();
-        exp.text = Playerstate.instance.currentExp.ToString() + "/" + Playerstate.instance.nextlevelExp[Playerstate.instance.playerLevel].ToString();
+        playerName.text = PlayerInfoManager.instance.info.playerName;
+        level.text = PlayerInfoManager.instance.info.playerLevel.ToString();
+        exp.text = PlayerInfoManager.instance.info.currentExp.ToString() + "/" + PlayerInfoManager.instance.info.nextlevelExp.ToString();
         //升级加成+装备加成+天赋加成
 
         //health.text = Playerstate.instance.currentHp + "/"+Playerstate.instance.maxHp+PlayerInfoManager.instance.info.health.ToString();
-        health.text = Playerstate.instance.currentHp + "/" + Playerstate.instance.maxHp;
+        health.text = PlayerInfoManager.instance.info.currentHp + "/" + PlayerInfoManager.instance.info.maxHp;
         poisonResistance.text = PlayerInfoManager.instance.info.poisonResistance.ToString();
-        hitResistance.text = (Playerstate.instance.defense + PlayerInfoManager.instance.info.hitResistance).ToString();
+        hitResistance.text = (PlayerInfoManager.instance.info.hitResistance + PlayerInfoManager.instance.info.hitResistance).ToString();
         magicResistance.text = PlayerInfoManager.instance.info.magicResistance.ToString();
 
-        attack.text = (Playerstate.instance.attack+PlayerInfoManager.instance.info.attack).ToString();
+        attack.text = (PlayerInfoManager.instance.info.attack+PlayerInfoManager.instance.info.attack).ToString();
         critRate.text = PlayerInfoManager.instance.info.critRate.ToString();
         critPower.text = PlayerInfoManager.instance.info.critPower.ToString();
 
         //power.text = PlayerInfoManager.instance.info.power.ToString();
         //magic.text = Playerstate.instance.currentMp + "/" +Playerstate.instance.currentMp + PlayerInfoManager.instance.info.magic.ToString();
-        magic.text = Playerstate.instance.currentMp + "/" + Playerstate.instance.maxMp;
-        playerCurrentInfo.text = Playerstate.instance.description;
+        magic.text = PlayerInfoManager.instance.info.currentMp + "/" + PlayerInfoManager.instance.info.maxMp;
+        playerCurrentInfo.text = PlayerInfoManager.instance.info.description;
 
         //刷新技能页面
         //if (GameManager.instance.isSkillShoot)

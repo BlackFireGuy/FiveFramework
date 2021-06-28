@@ -1234,13 +1234,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b0afe43a1982124fb85c8003a2dea2b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2dc05e1496a6544b951045bb89f73a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1429,7 +1429,6 @@ MonoBehaviour:
   menu: {fileID: 5721304150602015216}
   musicSlider: {fileID: 5721304149768763695}
   soundSlider: {fileID: 5721304150450234351}
-  btn: {fileID: 5721304150175138162}
   back: {fileID: 0}
   exist: {fileID: 3514185750298453783}
 --- !u!1 &5721304150566054291

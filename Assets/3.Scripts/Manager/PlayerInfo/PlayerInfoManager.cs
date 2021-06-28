@@ -159,11 +159,29 @@ public class PlayerInfoManager : MonoBehaviour
             Destroy(playerController.ShootParent.transform.GetChild(0).gameObject);
     }
 
-   /* public void Start()
+    public void Start()
     {
-        TimerMgr.instance.CreateTimerAndStart(60, -1, SaveGame);
+        //TimerMgr.instance.CreateTimerAndStart(60, -1, SaveGame);
+        SyncInfo();
+        //升级时同步过来数据 
+        EventCenter.GetInstance().AddEventListener(EventCfg.LEVEL_UP,SyncInfo);
+    }
+    void SyncInfo()
+    {
+        info.playerName = Playerstate.instance.playerName;
+        info.description = Playerstate.instance.description;
+        info.playerLevel = Playerstate.instance.playerLevel;
+        info.maxLevel = Playerstate.instance.maxLevel;
+        info.maxHp = Playerstate.instance.maxHp ;
+        info.maxMp = Playerstate.instance.maxMp ;
+        info.currentHp = Playerstate.instance.currentHp ;
+        info.currentMp = Playerstate.instance.currentMp ;
+        info.attack = Playerstate.instance.attack ;
+        info.hitResistance = Playerstate.instance.defense;
+        info.nextlevelExp = Playerstate.instance.nextlevelExp[Playerstate.instance.playerLevel];
     }
 
+    /*
     private void SaveGame()
     {
         Debug.Log("保存一次");
@@ -173,9 +191,7 @@ public class PlayerInfoManager : MonoBehaviour
 
     public void Update()
     {
-       
-
-        playTime = Time.time;
+        /*playTime = Time.time;
         info.age = 35 + (int)info.playTime / 3600;
         info.playTime = (int)info.playTime;
         switch (info.age)
@@ -207,7 +223,7 @@ public class PlayerInfoManager : MonoBehaviour
             default:
                 info.face = "年老色衰";
                 break;
-        }
+        }*/
         if(SkillManager.instance != null)
         {
             SkillManager.instance.skillPoint = info.points;

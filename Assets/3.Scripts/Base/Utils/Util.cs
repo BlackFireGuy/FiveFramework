@@ -18,6 +18,17 @@ public static class Util
 
         return dis;
     }
+    //2D游戏的距离判断方式
+    public static float Distance2D(Vector3 a, Vector3 b)
+    {
+
+        //判断到达目标点的距离
+        var dis = Vector3.Distance(new Vector3(a.x, a.y, 0), new Vector3(b.x, b.y, 0));
+
+        return dis;
+    }
+
+
     public static void SafeCall<T>(Action<T> callback, T arg)
     {
         if (callback != null) { callback(arg); }

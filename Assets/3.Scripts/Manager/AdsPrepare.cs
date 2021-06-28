@@ -15,11 +15,16 @@ public class AdsPrepare : MonoBehaviour, IUnityAdsListener
     private string gameID = "";
 #endif
 
+
+
+
+
+
+
     //HealthBar healthBar;
     string placementID = "rewardedVideo";
     [Header("看完广告给的奖励")]
     public List<GameObject> gifts = new List<GameObject>();
-
 
     public void OnUnityAdsDidError(string message)
     {
@@ -49,6 +54,7 @@ public class AdsPrepare : MonoBehaviour, IUnityAdsListener
                     healthBar.UpdateHealth(fullHealth);*/
                 int i = Random.Range(0, gifts.Count - 1);
                  GameObject obj =  GameObject.Instantiate(gifts[i]);
+                obj.transform.position = GameManager.instance.ObjPos.position;
                 break;
         }
     }

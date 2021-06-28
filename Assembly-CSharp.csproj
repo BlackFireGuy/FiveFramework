@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{04D8D80F-0B77-C56D-4760-4799A4B34C11}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -65,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3.Scripts\AnimationBehaviours\SetNormalizedTime.cs" />
     <Compile Include="Assets\3.Scripts\Base\AdsManager.cs" />
     <Compile Include="Assets\3.Scripts\Base\BaseSingleton.cs" />
     <Compile Include="Assets\3.Scripts\Base\EventCenter.cs" />
@@ -113,11 +113,13 @@
     <Compile Include="Assets\3.Scripts\Manager\DialogSystem\DialogButton.cs" />
     <Compile Include="Assets\3.Scripts\Manager\DialogSystem\DialogManager.cs" />
     <Compile Include="Assets\3.Scripts\Manager\DialogSystem\DialogNpc\DialogNpc1.cs" />
+    <Compile Include="Assets\3.Scripts\Manager\DialogSystem\DialogNpc\NPC1Door.cs" />
     <Compile Include="Assets\3.Scripts\Manager\DialogSystem\DialogNpc\TV.cs" />
     <Compile Include="Assets\3.Scripts\Manager\DialogSystem\DialogSystem.cs" />
     <Compile Include="Assets\3.Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\3.Scripts\Manager\GlobalVolumeManager.cs" />
     <Compile Include="Assets\3.Scripts\Manager\LoginInit.cs" />
+    <Compile Include="Assets\3.Scripts\Manager\MovieManager.cs" />
     <Compile Include="Assets\3.Scripts\Manager\PlayerInfo\PlayerInfoManager.cs" />
     <Compile Include="Assets\3.Scripts\Manager\Room\CameraUpDownController.cs" />
     <Compile Include="Assets\3.Scripts\Manager\Room\Room.cs" />
@@ -152,6 +154,9 @@
     <Compile Include="Assets\3.Scripts\SkillTree\SkillData.cs" />
     <Compile Include="Assets\3.Scripts\SkillTree\SkillManager.cs" />
     <Compile Include="Assets\3.Scripts\SkillTree\SkillTree.cs" />
+    <Compile Include="Assets\3.Scripts\TimelineTracks\DialogBehaviour.cs" />
+    <Compile Include="Assets\3.Scripts\TimelineTracks\DialogueClip.cs" />
+    <Compile Include="Assets\3.Scripts\TimelineTracks\DialogueTrack.cs" />
     <Compile Include="Assets\3.Scripts\UI\Animations\AnimationManager.cs" />
     <Compile Include="Assets\3.Scripts\UI\Animations\DamageNum.cs" />
     <Compile Include="Assets\3.Scripts\UI\Animations\LevelLoader.cs" />
@@ -175,6 +180,14 @@
     <Compile Include="Assets\3.Scripts\UI\Utils\ChangAn.cs" />
     <Compile Include="Assets\3.Scripts\UI\Utils\HealthBarSlider.cs" />
     <Compile Include="Assets\3.Scripts\UI\Utils\OnImage.cs" />
+    <Compile Include="Assets\5.TimeLine\5.Movies\Test.cs" />
+    <Compile Include="Assets\9.SpriteShape&amp;TileMap\Samples\2D SpriteShape\3.0.16\Sprite Shape Extras\Scripts\Clipper.cs" />
+    <Compile Include="Assets\9.SpriteShape&amp;TileMap\Samples\2D SpriteShape\3.0.16\Sprite Shape Extras\Scripts\ConformingSpline.cs" />
+    <Compile Include="Assets\9.SpriteShape&amp;TileMap\Samples\2D SpriteShape\3.0.16\Sprite Shape Extras\Scripts\GenerateSpriteShapes.cs" />
+    <Compile Include="Assets\9.SpriteShape&amp;TileMap\Samples\2D SpriteShape\3.0.16\Sprite Shape Extras\Scripts\GeometryCollider.cs" />
+    <Compile Include="Assets\9.SpriteShape&amp;TileMap\Samples\2D SpriteShape\3.0.16\Sprite Shape Extras\Scripts\LegacyCollider.cs" />
+    <Compile Include="Assets\9.SpriteShape&amp;TileMap\Samples\2D SpriteShape\3.0.16\Sprite Shape Extras\Scripts\SimpleDraw.cs" />
+    <Compile Include="Assets\9.SpriteShape&amp;TileMap\Samples\2D SpriteShape\3.0.16\Sprite Shape Extras\Scripts\Sprinkler.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -182,10 +195,12 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <None Include="Assets\0.Art\0.DialogFile\file3.txt" />
+    <None Include="Assets\0.Art\0.DialogFile\file4.txt" />
     <None Include="Assets\0.Art\0.DialogFile\file2.txt" />
+    <None Include="Assets\0.Art\RFX_Resources\Prefabs\Fx\V2\V2_Change.txt" />
+    <None Include="Assets\0.Art\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
     <None Include="Assets\0.Art\0.DialogFile\file1.txt" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -371,6 +386,9 @@
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>D:/GameSum/Five_backup/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library">
+      <HintPath>D:/GameSum/Five_backup/Library/PackageCache/com.unity.cinemachine@2.7.4/Runtime/ThirdParty/clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

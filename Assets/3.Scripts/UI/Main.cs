@@ -32,6 +32,7 @@ public class Main : BasePanel
         {
             //Debug.Log("载入存档");
             NewGameSet();
+            PlayerPrefs.SetInt("CG", 1);
             /*GameSaveManager.instance.LoadGame();*/
         }
         else//无存档
@@ -39,6 +40,7 @@ public class Main : BasePanel
             //Debug.Log("载入新存档");
             GameSaveManager.instance.NewGame();
             NewGameSet();
+            PlayerPrefs.SetInt("CG", 0);
         }
         
 
@@ -48,6 +50,7 @@ public class Main : BasePanel
     {
         GameSaveManager.instance.NewGame();
         NewGameSet();
+        PlayerPrefs.SetInt("CG", 0);
     }
     //新游戏设置
     public void NewGameSet()
@@ -57,5 +60,7 @@ public class Main : BasePanel
         //ScenesMgr.GetInstance().LoadScene("Home", null);
         LevelLoader.instance.LoadNextLevel("Home");
         UIManager.GetInstance().HidePanel("Main");
+        //开场CG
+        
     }
 }

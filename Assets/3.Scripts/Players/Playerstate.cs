@@ -40,29 +40,37 @@ public class Playerstate : MonoBehaviour
         {
             nextlevelExp[i] = Mathf.RoundToInt(nextlevelExp[i - 1] * 1.1f);
         }
+
+        //监听经验拾取事件
+        EventCenter.GetInstance().AddEventListener<int>(EventCfg.ADD_EXP, AddExp);
+
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AddExp(600);
+            //AddExp(600);
+            //EventCenter.GetInstance().EventTrigger(EventCfg.ADD_EXP, 600);
         }
     }
 
     public void AddExp(int amount)
     {
         currentExp += amount;
+        PlayerInfoManager.instance.info.currentExp = currentExp;
         if (playerLevel < maxLevel&&currentExp >= nextlevelExp[playerLevel])
         {
             levelUp();
+            //触发升级事件
+            EventCenter.GetInstance().EventTrigger(EventCfg.LEVEL_UP);
+
         }
-        if(playerLevel >= maxLevel)
+        if (playerLevel >= maxLevel)
         {
             currentExp = 0;
         }
     }
-
     private void levelUp()
     {
         currentExp -= nextlevelExp[playerLevel];

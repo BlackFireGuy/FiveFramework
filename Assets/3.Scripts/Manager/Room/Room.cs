@@ -30,8 +30,8 @@ public class Room : MonoBehaviour
     {
         if(transform.position != Vector3.zero)//初始房间之外随机怪物
         {
-
-            if (!GameManager.instance.isUpDown)
+            
+            if (GameManager.instance.isUpDown)
             {
                 
             }
@@ -43,6 +43,7 @@ public class Room : MonoBehaviour
                 doorUp.SetActive(roomUp);
                 //随机地图
                 int i = Random.Range(0, tilemaps.Count);
+                
                 tilemaps[i].SetActive(true);
             }
 

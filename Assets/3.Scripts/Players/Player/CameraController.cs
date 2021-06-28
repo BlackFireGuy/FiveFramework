@@ -8,19 +8,32 @@ public class CameraController : MonoBehaviour
     Transform target;
 
     //平滑缓冲的程度
-    public float dampTrace = 20.0f;//摄像机跟随的移动速度
+    int dampTrace = 4;//摄像机跟随的移动速度
     //偏移量
-    Vector3 offset = new Vector3(0,0,-10);
+    [Header("偏移量")]
+    public Vector3 offset = new Vector3(0,0,-10);
+
+    public float speed = 1;
 
     private void Update()
     {
-        target = FindObjectOfType<PlayerController>().transform;
+        if(target == null)
+            target = FindObjectOfType<PlayerController>().transform;
+        else
+        {
+            float t = Util.Distance2D(target.position, transform.position);
+            speed = (1 > t ?1:t);
+
+            speed = dampTrace * speed;
+
+        }
+
     }
 
     private void LateUpdate()
     {
         if (target == null) { return; }
-        transform.position = Vector3.Lerp(transform.position, target.position + offset, dampTrace * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, target.position + offset, speed * Time.deltaTime);
 
     }
 }

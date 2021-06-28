@@ -29,6 +29,8 @@ public class GameSaveManager : MonoBehaviour
     /// 2升级技能树时保存
     /// 3使用物品时保存
     /// 4打开人物信息表时保存
+    /// //5增加经验时保存
+    /// 
     /// </summary>
     public void SaveGame()
     {

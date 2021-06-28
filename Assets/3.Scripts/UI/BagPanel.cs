@@ -60,7 +60,8 @@ public class BagPanel : BasePanel
 
         if(healthBar != null)
         {
-            healthBar.UpdateHealth(FindObjectOfType<PlayerController>().health);
+            //healthBar.UpdateHealth(FindObjectOfType<PlayerController>().health);
+            healthBar.UpdateHealth(PlayerInfoManager.instance.info.currentHp);
         }
         ItemData itemData = playerInventory.itemList[id];
         //去掉对应ID的物品或者物品数量-1//装备或者技能显示装备卸下
