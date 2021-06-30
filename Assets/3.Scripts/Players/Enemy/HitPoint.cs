@@ -101,6 +101,10 @@ public class HitPoint : MonoBehaviour
             {
                 //other.GetComponent<Door>().OpenDoor();
             }
+            if (other.CompareTag("Body"))
+            {
+                //other.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.value*10, Random.value*10));
+            }
         }
         
     }
@@ -113,13 +117,13 @@ public class HitPoint : MonoBehaviour
 
     IEnumerator IsAttackCo()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.09f);
         isAttacked = false;
     }
     //根据激活时攻击的状态分配对应的攻击特效
     private void OnEnable()
     {
         if (transform == null) return;
-        PoolMgr.GetInstance().GetObj(PathCfg.PATH_FX + "beat2", (o) => { o.transform.position = transform.position; });
+        //PoolMgr.GetInstance().GetObj(PathCfg.PATH_FX + "beat3", (o) => { o.transform.position = transform.position; });
     }
 }

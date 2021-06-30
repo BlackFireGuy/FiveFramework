@@ -39,6 +39,12 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     [Header("技能和装备")]
     public Inventory inventorySkill;
+
+
+    [Header("死亡时需要禁止的脚本")]
+    public  Behaviour[] lists;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -72,8 +78,16 @@ public class PlayerController : MonoBehaviour, IDamageable
     void Update()
     {
         ani.SetBool("dead", isDead);
+        
         if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
-        if (isDead) return;
+        if (isDead) {
+            for(int i = 0; i < lists.Length; i++)
+            {
+                lists[i].enabled = false;
+            }
+            
+            return;
+        } 
         if (bhit.beAttacking) return;
         if (joystick == null)
             joystick = FindObjectOfType<FloatingJoystick>();
@@ -128,8 +142,8 @@ public class PlayerController : MonoBehaviour, IDamageable
             //血条不动
             healthBar.transform.localEulerAngles = new Vector3(0, 180, 0);
         }
-        
 
+        GameManager.instance.horizontal = horizontalInput;
 
 
         if (Input.GetKeyDown("space"))
@@ -179,6 +193,7 @@ public class PlayerController : MonoBehaviour, IDamageable
                 healthBar.transform.localEulerAngles = new Vector3(0, 180, 0);
             }
             if (horizontalInput < 0.0001f&&horizontalInput>-0.0001f) return;
+            GameManager.instance.horizontal = horizontalInput;
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
         }
     }

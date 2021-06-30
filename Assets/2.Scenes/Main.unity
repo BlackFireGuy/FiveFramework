@@ -6191,6 +6191,8 @@ MonoBehaviour:
   playableDirector: {fileID: 0}
   mainCamera: {fileID: 0}
   gameMode: 0
+  horizontal: 0
+  vertical: 0
 --- !u!1 &8071516714975453651
 GameObject:
   m_ObjectHideFlags: 0
@@ -6237,7 +6239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gifts:
   - {fileID: 4235187348111502788, guid: 567d5df851b09344fa348633d5e7d8eb, type: 3}
-  rewardPosition: {fileID: 0}
 --- !u!1 &8071516715714245271
 GameObject:
   m_ObjectHideFlags: 0

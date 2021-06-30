@@ -98,14 +98,14 @@ public class ArmourHit : MonoBehaviour
             ani.SetTrigger("attack");
             ani.SetInteger("currentAttack", BeatManager.instance.currentAttack);
         }
-        //如果当前动画处于attack1(攻击阶段一)并且该动画播放进度小于80%，此时按下攻击键可过渡到攻击阶段二
-        else if (stateInfo.IsName("Beat.attack1") && BeatManager.instance.currentAttack == 1 && stateInfo.normalizedTime < 0.85f)
+        //如果当前动画处于attack1(攻击阶段一)并且该动画播放进度小于66%，此时按下攻击键可过渡到攻击阶段二
+        else if (stateInfo.IsName("Beat.attack1") && BeatManager.instance.currentAttack == 1 && stateInfo.normalizedTime < 0.70f)
         {
             BeatManager.instance.attacktime = Time.time;
             BeatManager.instance.currentAttack = 2;
         }
         //同上
-        else if (stateInfo.IsName("Beat.attack2") && BeatManager.instance.currentAttack == 2 && stateInfo.normalizedTime < 0.85f)
+        else if (stateInfo.IsName("Beat.attack2") && BeatManager.instance.currentAttack == 2 && stateInfo.normalizedTime < 0.70f)
         {
             BeatManager.instance.attacktime = Time.time;
             BeatManager.instance.currentAttack = 3;
@@ -147,10 +147,10 @@ public class ArmourHit : MonoBehaviour
         newEvent.time = 0.0f;
         AnimationEvent newEvent1 = new AnimationEvent();
         newEvent1.functionName = "SetIsMoveFalse";
-        newEvent1.time = 0.12f;
+        newEvent1.time = 0.20f;
         AnimationEvent newEvent2 = new AnimationEvent();
         newEvent2.functionName = "GoToNextAttackAction";
-        newEvent2.time = 0.86f;
+        newEvent2.time = 0.66f;
         
         for (int i = 0; i < attacks_lightly.Length; i++)
         {

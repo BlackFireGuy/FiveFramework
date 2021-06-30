@@ -15,6 +15,8 @@ TagManager:
   - Beat
   - Sword
   - Hammer
+  - Fx
+  - Body
   layers:
   - Default
   - TransparentFX

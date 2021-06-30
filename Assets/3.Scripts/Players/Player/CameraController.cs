@@ -17,10 +17,13 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if(target == null)
+        if (GameManager.instance.gameOver) return;
+        if(target == null&& FindObjectOfType<PlayerController>() != null)
             target = FindObjectOfType<PlayerController>().transform;
         else
         {
+            if (target == null) return;
+
             float t = Util.Distance2D(target.position, transform.position);
             speed = (1 > t ?1:t);
 
@@ -32,6 +35,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (GameManager.instance.gameOver) return;
         if (target == null) { return; }
         transform.position = Vector3.Lerp(transform.position, target.position + offset, speed * Time.deltaTime);
 
