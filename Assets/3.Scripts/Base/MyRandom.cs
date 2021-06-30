@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class MyRandom : MonoBehaviour
+public static class MyRandom 
 {
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
-        /*int iRnd = System.DateTime.Now.Millisecond;
+        *//*int iRnd = System.DateTime.Now.Millisecond;
         System.Random randomCoor = new System.Random(iRnd);
         for (int i = 0; i < 10; i++)
         {
@@ -18,7 +18,7 @@ public class MyRandom : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             Debug.Log(UnityEngine.Random.Range(1,53) + "+");
-        }*/
+        }*//*
 
         for (int i = 0; i < 10; i++)
         {
@@ -26,14 +26,14 @@ public class MyRandom : MonoBehaviour
 
             //Debug.Log(UnityEngine.Random.Range(0, 100));
 
-            /*虚假的随机数
+            *//*虚假的随机数
             System.Random r = new System.Random();
             r = new System.Random(1);
-            Debug.Log(r.Next(0, 100));*/
+            Debug.Log(r.Next(0, 100));*//*
         }
 
-    }
-    static int GetRandomNumber(int min, int max)
+    }*/
+    public static int GetRandomNumber(int min, int max)
     {
         int rtn = 0;
 
@@ -43,7 +43,7 @@ public class MyRandom : MonoBehaviour
         int iSeed = BitConverter.ToInt32(buffer, 0);
         r = new System.Random(iSeed);
 
-        rtn = r.Next(min, max + 1);
+        rtn = r.Next(min, max + 1);//包含最大最小
 
         return rtn;
     }

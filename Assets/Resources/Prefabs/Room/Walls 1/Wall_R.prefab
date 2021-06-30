@@ -2641,6 +2641,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform5_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1930434226312999205, guid: da84a98d352b6c144a040efb307059ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900836498521826240, guid: da84a98d352b6c144a040efb307059ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.721
+      objectReference: {fileID: 0}
     - target: {fileID: 6215567079626627903, guid: da84a98d352b6c144a040efb307059ff,
         type: 3}
       propertyPath: m_LocalPosition.x

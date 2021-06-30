@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{04D8D80F-0B77-C56D-4760-4799A4B34C11}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -125,6 +126,7 @@
     <Compile Include="Assets\3.Scripts\Manager\Room\Room.cs" />
     <Compile Include="Assets\3.Scripts\Manager\Room\RoomGenerator.cs" />
     <Compile Include="Assets\3.Scripts\Manager\Room\WallMap.cs" />
+    <Compile Include="Assets\3.Scripts\Manager\Room\WallTrigger.cs" />
     <Compile Include="Assets\3.Scripts\Players\Actions\MyCanSeeObject.cs" />
     <Compile Include="Assets\3.Scripts\Players\Actions\MySeek2D.cs" />
     <Compile Include="Assets\3.Scripts\Players\ArmourHit.cs" />
@@ -149,6 +151,7 @@
     <Compile Include="Assets\3.Scripts\Players\Player\PlayerUpDownController.cs" />
     <Compile Include="Assets\3.Scripts\Players\PlayerInfomation.cs" />
     <Compile Include="Assets\3.Scripts\Players\Playerstate.cs" />
+    <Compile Include="Assets\3.Scripts\Players\bodySet.cs" />
     <Compile Include="Assets\3.Scripts\Setup.cs" />
     <Compile Include="Assets\3.Scripts\SkillTree\SkillButton.cs" />
     <Compile Include="Assets\3.Scripts\SkillTree\SkillData.cs" />

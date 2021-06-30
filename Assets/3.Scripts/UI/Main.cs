@@ -31,16 +31,16 @@ public class Main : BasePanel
         if (GameSaveManager.instance.IsSaved())//有存档
         {
             //Debug.Log("载入存档");
-            NewGameSet();
-            PlayerPrefs.SetInt("CG", 1);
+            NewGameSet(1);
+            //PlayerPrefs.SetInt("CG", 1);
             /*GameSaveManager.instance.LoadGame();*/
         }
         else//无存档
         {
             //Debug.Log("载入新存档");
             GameSaveManager.instance.NewGame();
-            NewGameSet();
-            PlayerPrefs.SetInt("CG", 0);
+            NewGameSet(0);
+            ///PlayerPrefs.SetInt("CG", 0);
         }
         
 
@@ -49,14 +49,15 @@ public class Main : BasePanel
     public void NewGame()
     {
         GameSaveManager.instance.NewGame();
-        NewGameSet();
-        PlayerPrefs.SetInt("CG", 0);
+        NewGameSet(0);
+        
     }
     //新游戏设置
-    public void NewGameSet()
+    public void NewGameSet(int isFirstIn)
     {
         //Debug.Log("载入新存档");
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("CG", isFirstIn);
         //ScenesMgr.GetInstance().LoadScene("Home", null);
         LevelLoader.instance.LoadNextLevel("Home");
         UIManager.GetInstance().HidePanel("Main");

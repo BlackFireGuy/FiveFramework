@@ -6,7 +6,8 @@ public class beatFX : MonoBehaviour
 {
     private void OnEnable()
     {
-        this.GetComponent<Animator>().SetTrigger("enable");
+        if(this.GetComponent<Animator>()!= null)
+            this.GetComponent<Animator>().SetTrigger("enable");
 
         StartCoroutine(PushObj());
     }

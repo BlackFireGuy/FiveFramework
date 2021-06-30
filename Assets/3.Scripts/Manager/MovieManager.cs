@@ -25,7 +25,7 @@ public class MovieManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     internal void SetDialogue(string characterName, string dialogueLine, int dialogueSize)

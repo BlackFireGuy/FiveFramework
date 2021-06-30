@@ -41,6 +41,11 @@ public class RoomGenerator : MonoBehaviour
     public WallType wallType;
     [Header("随机Boss")]
     public List<GameObject> boss = new List<GameObject>();
+
+    float maxX;
+    float maxY;
+    Vector3 transformCenter;
+
     void Start()
     {
         for (int i = 0; i < roomNumber; i++)
@@ -59,14 +64,27 @@ public class RoomGenerator : MonoBehaviour
         endRoom = rooms[0].gameObject;
 
         //找到最后房间
-        foreach(var room in rooms)
+        foreach (var room in rooms)
         {
             SetupRoom(room, room.transform.position);
         }
         FindEndRoom();
+
+        //增加死亡边界
+        MaxWallCollider();
+
         endRoom.GetComponent<SpriteRenderer>().color = endColor;
         //最后一个房间设置随机Boss和随机奖励
         RandomBossAndGift();
+    }
+
+    private void MaxWallCollider()
+    {
+        maxX = Mathf.Abs(endRoom.transform.position.x / xOffset) + 1f;
+        maxY = Mathf.Abs(endRoom.transform.position.y / yOffset) + 1f;
+        //transformCenter = new Vector3(endRoom.transform.position.x / 2, endRoom.transform.position.y / 2, 1);
+        transform.localScale = new Vector3(maxX*2+2, maxY*2+3, 1);
+        transform.position = transformCenter;
     }
 
     public void Update()

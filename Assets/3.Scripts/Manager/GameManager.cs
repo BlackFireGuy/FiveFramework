@@ -42,6 +42,11 @@ public class GameManager : MonoBehaviour
     public enum GameMode { GamePlay, DialogueMoment,Normal}
     public GameMode gameMode;
 
+    [Header("玩家的操作")]
+    public float horizontal;
+    public float vertical;
+    
+
     public void Awake()
     {
         if (instance == null)
@@ -75,7 +80,7 @@ public class GameManager : MonoBehaviour
             //showCG 
             //进入Show模式, 成成初始物品
             gameMode = GameMode.GamePlay;
-            //if ()
+            if (!GameManager.instance.isInMap&&!GameManager.instance.isMain)
             {
                 playableDirector.Play();
                 for (int i = 0; i < Objs.Count; i++)
@@ -83,14 +88,19 @@ public class GameManager : MonoBehaviour
                     Instantiate(Objs[i]).transform.position = ObjPos.position - i * Vector3.right;
                 }
             }
+            else
+            {
+                PlayerPrefs.GetInt("CG", 1);
+                SetGameModeNormal();
+            }
 
 
         }
         else
         {
-            
-            SetGameSettings();
+            SetGameModeNormal();
         }
+        
 
         
 
@@ -137,7 +147,7 @@ public class GameManager : MonoBehaviour
             GameObject obj = ResMgr.GetInstance().Load<GameObject>("Prefabs/Player/BlackMan4");
             obj.transform.position = bornPos.position;
         }
-
+        
         //播放音乐
         //MusicMgr.GetInstance().PlayBMusic("BK1");
     }
