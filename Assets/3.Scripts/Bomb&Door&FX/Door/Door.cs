@@ -66,6 +66,20 @@ public class Door : MonoBehaviour
     }*/
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (GameManager.instance.isBossDead)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                GameSaveManager.instance.SaveGame();
+                //ScenesMgr.GetInstance().LoadScene(scene, null);
+                LevelLoader.instance.LoadNextLevel(scene);
+            }
+            
+        }
+    }
+
     public IEnumerator WaitForAnimationPlayOver(float time)
     {
         /*if (LevelLoader.instance != null)

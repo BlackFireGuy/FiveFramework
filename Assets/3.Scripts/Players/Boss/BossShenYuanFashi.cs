@@ -16,6 +16,7 @@ public class BossShenYuanFashi : Enemy,IDamageable
             {
                 health = 0;
                 isDead = true;
+                this.gameObject.DestroyAllChildren();
             }
             ani.SetTrigger("hit");
         }
@@ -46,7 +47,7 @@ public class BossShenYuanFashi : Enemy,IDamageable
     }
 
     public Transform muzzleTransform;
-    public string bulletPath = "Prefabs/Bomb&TVAndSoOn/GUN&Bullet/Bullet003";
+    public string bulletPath = "Bullet003";
 
     /// <summary>
     /// 攻击动作响应事件

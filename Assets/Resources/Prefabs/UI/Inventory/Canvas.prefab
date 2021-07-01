@@ -790,12 +790,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myBag: {fileID: 11400000, guid: 61a56f59b13d3304fbe9444aa79eb432, type: 2}
-  slotGrid: {fileID: 5922771360285906658}
   emptyslot: {fileID: 8122866207570069833, guid: 86114bff4a84a0846b0b01ed8eee7250,
     type: 3}
+  slotGrid: {fileID: 5922771360285906658}
   itemInformation: {fileID: 5922771361856076727}
+  itemID: 0
   slots: []
-  bagUI: {fileID: 5922771362028767925}
+  use: {fileID: 0}
 --- !u!1 &5922771361579189738
 GameObject:
   m_ObjectHideFlags: 0

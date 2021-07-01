@@ -41,9 +41,9 @@ public class PlayerController : MonoBehaviour, IDamageable
     public Inventory inventorySkill;
 
 
-    [Header("死亡时需要禁止的脚本")]
-    public  Behaviour[] lists;
-
+    [Header("死亡时需要禁止的脚本 & 物体")]
+    public  Behaviour[] listB;
+    public GameObject[] listO;
 
     void Start()
     {
@@ -65,9 +65,16 @@ public class PlayerController : MonoBehaviour, IDamageable
             {
                 PlayerInfoManager.instance.infoItemData = inventorySkill.itemList[i];
                 //PoolMgr.GetInstance().GetObj(SkillTable.skillpath[inventorySkill.itemList[i].skillId], SkillInit);
-
+/*
                 GameObject obj = ResMgr.GetInstance().Load<GameObject>(SkillTable.skillpath[inventorySkill.itemList[i].skillId]);
                 SkillInit(obj);
+*/
+                ResMgr.GetInstance().Load<GameObject>(SkillTable.skillpath[inventorySkill.itemList[i].skillId], (obj) => {
+                    var instance = Instantiate(obj.Result);
+                    GameObject.DontDestroyOnLoad(instance);
+                    SkillInit(instance);
+                });
+
                 GameManager.instance.isSkillShoot = true;
             }
         }
@@ -81,9 +88,9 @@ public class PlayerController : MonoBehaviour, IDamageable
         
         if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
         if (isDead) {
-            for(int i = 0; i < lists.Length; i++)
+            for(int i = 0; i < listB.Length; i++)
             {
-                lists[i].enabled = false;
+                listB[i].enabled = false;
             }
             
             return;
@@ -110,7 +117,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         //是否失控
         if (bhit.beAttacking||BeatManager.instance.isAttacking) return;
 
-        MoveController();
+        MovePC();
 
         //编辑器下调试
         if (bhit.isGround||bhit.isAgainstwall)
@@ -118,7 +125,9 @@ public class PlayerController : MonoBehaviour, IDamageable
             JumpNum = 0;
             canJump = true;
         }
-        MovePC();
+
+        MoveController();
+
     }
 
 
@@ -192,8 +201,18 @@ public class PlayerController : MonoBehaviour, IDamageable
                 //血条不动
                 healthBar.transform.localEulerAngles = new Vector3(0, 180, 0);
             }
+            if(horizontalInput > 0)
+            {
+                GameManager.instance.horizontal = horizontalInput;
+            }
+            else
+            {
+                GameManager.instance.horizontal = Input.GetAxis("Horizontal");
+            }
+
+            
             if (horizontalInput < 0.0001f&&horizontalInput>-0.0001f) return;
-            GameManager.instance.horizontal = horizontalInput;
+            
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
         }
     }
@@ -265,6 +284,12 @@ public class PlayerController : MonoBehaviour, IDamageable
             if (PlayerInfoManager.instance.info.currentHp < 1)
             {
                 PlayerInfoManager.instance.info.currentHp = 0;
+
+                for (int i = 0; i < listO.Length; i++)
+                {
+                    listO[i].SetActive(false);
+                }
+
                 isDead = true;
             }
             ani.SetTrigger("hit");

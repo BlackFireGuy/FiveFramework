@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
 
     bool isGifted  = false;
     
-    string path = "Prefabs/EnvironmentTools/shanshan";//天赋路径
+    string path = "shanshan";//天赋路径
     public virtual void Init()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -246,7 +246,8 @@ public class Enemy : MonoBehaviour
     {
         alarmSigh.SetActive(true);
         yield return new WaitForSeconds(alarmSigh.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.length);//返回的是baselayer的唯一的一个动画的片段的长度
-        alarmSigh.SetActive(false);
+        if(this.gameObject != null)
+            alarmSigh.SetActive(false);
     }
     protected void LinkYwithOrderinlayer()
     {

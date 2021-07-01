@@ -43,9 +43,11 @@ public class Slot : MonoBehaviour
     {
         if (item == null)
         {
+            Debug.Log("item为空");
             itemSlot.SetActive(false);
             return;
         }
+        
         slotItem = item;
         slotImage.sprite = item.itemImage;
         slotInfo = item.itemInfo;
@@ -53,9 +55,11 @@ public class Slot : MonoBehaviour
         {
             slotNum.text = "";
             slotImage.color = new Color(0, 0, 0, 0);
+            Debug.Log("item为空");
         }
         else
         {
+            Debug.Log("在检查仓库 刷新时" + item.itemName);
             slotNum.text = item.itemHeld.ToString();
         }
     }

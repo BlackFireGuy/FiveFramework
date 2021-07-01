@@ -25,7 +25,7 @@ public class PauseMenu : BasePanel
         Time.timeScale = 1;
         //ScenesMgr.GetInstance().RestartSccene();
         LevelLoader.instance.LoadNextLevel(SceneManager.GetActiveScene().buildIndex);
-        MusicMgr.GetInstance().ClearSounds();
+        //MusicMgr.GetInstance().ClearSounds();
     }
 
     private void GoToMainMenu()
@@ -33,7 +33,7 @@ public class PauseMenu : BasePanel
         //恢复时间流动
         Time.timeScale = 1;
         //清空音效
-        MusicMgr.GetInstance().ClearSounds();
+        //MusicMgr.GetInstance().ClearSounds();
         //载入场景
         //ScenesMgr.GetInstance().LoadScene(0, null);
         //ScenesMgr.GetInstance().LoadScene("Home", null);

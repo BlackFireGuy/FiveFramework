@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
     public float flySpeed;//飞行速度
     public float arrawDistance;
     public Vector3 startPos;
-    public string bulletPath = "Prefabs/Bomb&TVAndSoOn/GUN&Bullet/Bullet001";
+    public string bulletPath = "Bullet001";
 
     public GameObject damageCanvas;
     protected virtual void Start()

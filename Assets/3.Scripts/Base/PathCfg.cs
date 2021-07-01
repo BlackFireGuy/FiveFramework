@@ -12,7 +12,7 @@
     //--------------------------文件 文件保存位置
 
     //---------------------------资源文件路径--------------
-    public static string PATH_BGM = "Music/BK/";
+    /*public static string PATH_BGM = "Music/BK/";
 
     public static string PATH_MUSIC_SOUND = "Music/Sound/";
 
@@ -22,7 +22,16 @@
 
     public static string UI_SYSTEM_OBJECT_MADE_BY_UIMANAGER = "Prefabs/UI/EventSystem";
 
-    public static string PATH_FX = "Prefabs/FX/";
+    public static string PATH_FX = "Prefabs/FX/";*/
+    //---------------------------云端资源名称--------------
+    public static string UI_CANVAS = "Canvas";
+
+    public static string UI_SYSTEM = "EventSystem";
+
+    public static string UI_LevelLoader = "LevelLoader";
+
+    public static string UI_ = "";
+
     //---------------------------prefab文件名称
     //--------------------------ui Login
     public static string PREFAB_PANEL_LOGIN = "Login";

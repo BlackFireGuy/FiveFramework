@@ -42,7 +42,7 @@ public class ItemOnWorld : MonoBehaviour
                 if (playerInventory.itemList[i] == null || playerInventory.itemList[i].itemName == ""|| playerInventory.itemList[i].itemName == null)
                 {
                     playerInventory.itemList[i] = thisItem;
-                    //Debug.Log("新捡起物体" + playerInventory.itemList[i].itemName);
+                    Debug.Log("新捡起物体" + playerInventory.itemList[i].itemName);
                     added = false;
                     break;
                 }

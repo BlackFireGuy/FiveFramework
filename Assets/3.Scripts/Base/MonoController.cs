@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -40,6 +41,11 @@ public class MonoController : MonoBehaviour
     public void RemoveUpdateListener(UnityAction fun)
     {
         updateEvent -= fun;
+    }
+
+    internal GameObject InstantiateObj(GameObject obj)
+    {
+        return Instantiate(obj);
     }
 }
 

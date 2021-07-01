@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -45,7 +46,8 @@ public class GameManager : MonoBehaviour
     [Header("玩家的操作")]
     public float horizontal;
     public float vertical;
-    
+
+    public int CGNum;
 
     public void Awake()
     {
@@ -59,7 +61,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(player!=null)
+        CGNum = PlayerPrefs.GetInt("CG");
+        if (player!=null)
             gameOver = player.isDead;
         //UIMgr.instance.GameOverUI(gameOver);
         if (gameOver&&!isgameoverpaenlshowed)
@@ -83,14 +86,17 @@ public class GameManager : MonoBehaviour
             if (!GameManager.instance.isInMap&&!GameManager.instance.isMain)
             {
                 playableDirector.Play();
+                PlayerPrefs.SetInt("CG", 1);
                 for (int i = 0; i < Objs.Count; i++)
                 {
+                    
                     Instantiate(Objs[i]).transform.position = ObjPos.position - i * Vector3.right;
+                    GameSaveManager.instance.SaveGame();
                 }
             }
             else
             {
-                PlayerPrefs.GetInt("CG", 1);
+                PlayerPrefs.SetInt("CG", 1);
                 SetGameModeNormal();
             }
 
@@ -98,6 +104,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            PlayerPrefs.SetInt("CG", 1);
             SetGameModeNormal();
         }
         
@@ -138,18 +145,39 @@ public class GameManager : MonoBehaviour
         //再初始化角色和NPC
         if (isUpDown)//第三人称俯视角
         {
-            GameObject obj = ResMgr.GetInstance().Load<GameObject>("Prefabs/Player/BlackMan4");
-            obj.transform.position = bornPos.position;
+            //GameObject obj = ResMgr.GetInstance().Load<GameObject>("Prefabs/Player/BlackMan4");
+            //obj.transform.position = bornPos.position;
 
         }
         else//第三人称2D横板
         {
-            GameObject obj = ResMgr.GetInstance().Load<GameObject>("Prefabs/Player/BlackMan4");
-            obj.transform.position = bornPos.position;
+
+            /*GameObject obj = ResMgr.GetInstance().Load<GameObject>("Prefabs/Player/BlackMan4");
+            obj.transform.position = bornPos.position;*/
+            //新的加载方式
+            ResMgr.GetInstance().Load<GameObject>("BlackMan4", OnPlayerLoaded);
         }
         
         //播放音乐
         //MusicMgr.GetInstance().PlayBMusic("BK1");
+    }
+    //加载角色使用的回调函数
+    private void OnPlayerLoaded(AsyncOperationHandle<GameObject> obj)
+    {
+        switch (obj.Status)
+        {
+            case AsyncOperationStatus.Succeeded:
+                GameObject loadedObject = obj.Result;
+                GameObject player = Instantiate(loadedObject, bornPos.position, Quaternion.identity);
+                Renderer[] renderers = player.GetComponentsInChildren<SpriteRenderer>();
+                foreach (var item in renderers)
+                {
+                    item.material.shader = Shader.Find("Universal Render Pipeline/2D/Sprite-Lit-Default");
+                }
+                break;
+            default:
+                break;
+        }
     }
 
     internal void PauseTimeline(PlayableDirector playableDirector)

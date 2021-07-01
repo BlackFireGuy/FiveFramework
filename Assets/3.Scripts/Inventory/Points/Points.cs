@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Points : MonoBehaviour
 {
-    string path = "Prefabs/EnvironmentTools/shanshan";
+    string path = "shanshan";
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

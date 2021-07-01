@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: c7615b5edc8c1a040927c6be1d8fe829
+  m_BuildRemoteCatalog: 1
+  m_BundleLocalCatalog: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_UniqueBundleIds: 0
+  m_RemoteCatalogBuildPath:
+    m_Id: 62ff67916c98d5b499a278b2e961c298
+  m_RemoteCatalogLoadPath:
+    m_Id: eedb8101aaede9844bb8c61f79e20bdb
+  m_overridePlayerVersion: 
+  m_GroupAssets:
+  - {fileID: 11400000, guid: 73b492aca5a26484f858dfd6cc0f3337, type: 2}
+  - {fileID: 11400000, guid: 832f32c663698e045a7d0cdca2e4dc21, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: 2273c38291a3cab47a331355cdcbcda6
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 8f56d8274ca053440bcb7221f0634c96
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 9acae864ea1ab534083bfbdacc80f695
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 3bf65cb40485c51488c13bfd0953d5fc
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 62ff67916c98d5b499a278b2e961c298
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: eedb8101aaede9844bb8c61f79e20bdb
+        m_Value: https://assetstreaming.unity.cn/client_api/v1/buckets/4405be65-7b53-4e14-ba48-3bbc9a2a474a/release_by_badge/latest/entry_by_path/content/?path=
+    m_ProfileEntryNames:
+    - m_Id: 8f56d8274ca053440bcb7221f0634c96
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: 9acae864ea1ab534083bfbdacc80f695
+      m_Name: LocalBuildPath
+      m_InlineUsage: 0
+    - m_Id: 3bf65cb40485c51488c13bfd0953d5fc
+      m_Name: LocalLoadPath
+      m_InlineUsage: 0
+    - m_Id: 62ff67916c98d5b499a278b2e961c298
+      m_Name: RemoteBuildPath
+      m_InlineUsage: 0
+    - m_Id: eedb8101aaede9844bb8c61f79e20bdb
+      m_Name: RemoteLoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - Player
+    - BK
+    - Sound
+    - Res
+    - Gun
+    - Bullet
+    - enemy
+    - NPC
+    - Boss
+    - Platform
+    - FX
+    - Item
+    - Platformcheck
+    - UI
+    - Inventory
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: cc3522fb02481dc47a986f435c05176b, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: 0c9050a8f519a284a90e5a3a854cb62c, type: 2}
+  - {fileID: 11400000, guid: fd50066f1c432934980165f039ad002a, type: 2}
+  - {fileID: 11400000, guid: bc97a76eb5da78e4a9dd505f2008c3ac, type: 2}
+  - {fileID: 11400000, guid: cd8a2e94fda456041bb4c116616f0008, type: 2}
+  m_ActiveProfileId: 2273c38291a3cab47a331355cdcbcda6
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []

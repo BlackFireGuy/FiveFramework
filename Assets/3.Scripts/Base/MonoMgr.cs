@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
@@ -71,6 +72,8 @@ public class MonoMgr : BaseSingleton<MonoMgr>
         controller.StopCoroutine(methodName);
     }
 
-    
-
+    internal GameObject InstantiateObj(GameObject obj)
+    {
+        return controller.InstantiateObj(obj);
+    }
 }

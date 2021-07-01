@@ -135,8 +135,13 @@ public class PlayerInfoManager : MonoBehaviour
         infoItemData = itemData;
         //在角色身上挂载技能
         //PoolMgr.GetInstance().GetObj(SkillTable.skillpath[itemData.skillId], SkillInit);
-        GameObject obj =  ResMgr.GetInstance().Load<GameObject>(SkillTable.skillpath[itemData.skillId]);
-        SkillInit(obj);
+        /*GameObject obj =  ResMgr.GetInstance().Load<GameObject>(SkillTable.skillpath[itemData.skillId]);
+        SkillInit(obj);*/
+        ResMgr.GetInstance().Load<GameObject>(SkillTable.skillpath[itemData.skillId], (obj) => {
+            var instance = Instantiate(obj.Result);
+            GameObject.DontDestroyOnLoad(instance);
+            SkillInit(instance);
+        });
     }
 
     //在角色身上挂载技能

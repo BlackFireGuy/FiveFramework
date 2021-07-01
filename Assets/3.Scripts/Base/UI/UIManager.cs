@@ -33,21 +33,26 @@ public class UIManager : BaseSingleton<UIManager>
     public UIManager()
     {
         //创建Canvas 让其过场景的时候 不被移除
-        GameObject obj = ResMgr.GetInstance().Load<GameObject>(PathCfg.UI_CANVAS_OBJECT_MADE_BY_UIMANAGER);
-        Transform canvas = obj.transform;
-        GameObject.DontDestroyOnLoad(obj);
+        ResMgr.GetInstance().Load<GameObject>(PathCfg.UI_CANVAS,(obj)=> {
+            var instance = MonoMgr.GetInstance().InstantiateObj(obj.Result);
+            GameObject.DontDestroyOnLoad(instance);
+            Transform canvas = instance.transform;
+            //找到各层
+            bot = canvas.Find("Bot");
+            mid = canvas.Find("Mid");
+            top = canvas.Find("Top");
+            system = canvas.Find("System");
+            twice = canvas.Find("Twice");
 
-        //找到各层
-        bot = canvas.Find("Bot");
-        mid = canvas.Find("Mid");
-        top = canvas.Find("Top");
-        system = canvas.Find("System");
-        twice = canvas.Find("Twice");
+        });
+        
 
         //创建EventSystem 让其过场景的时候不被移除
-        obj = ResMgr.GetInstance().Load<GameObject>(PathCfg.UI_SYSTEM_OBJECT_MADE_BY_UIMANAGER);
+        ResMgr.GetInstance().Load<GameObject>(PathCfg.UI_SYSTEM,(obj)=> {
+            var instance = MonoMgr.GetInstance().InstantiateObj(obj.Result);
+            GameObject.DontDestroyOnLoad(instance);
 
-        GameObject.DontDestroyOnLoad(obj);
+        });
     }
 
     /// <summary>
@@ -68,13 +73,15 @@ public class UIManager : BaseSingleton<UIManager>
             return;
         }
 
-
-        ResMgr.GetInstance().LoadAsync<GameObject>(PathCfg.PATH_UI + panelName, (obj) => {
+        //更新为云端的时候去掉了PathCfg.PATH_UI + 
+        ResMgr.GetInstance().LoadAsync<GameObject>(panelName, (obj) => {
             //把他作为Canvas的子对象
             //并且要设置它的相对位置
             //找到父对象 你到底显示在那一层
             Transform father = bot;
-            switch(layer)
+            var instance = MonoMgr.GetInstance().InstantiateObj(obj.Result);
+
+            switch (layer)
             {
                 case E_UI_Layer.Mid:
                     father = mid;
@@ -94,17 +101,17 @@ public class UIManager : BaseSingleton<UIManager>
                     
             }
             //设置父对象 设置相对位置和大小
-            obj.transform.SetParent(father);
+            instance.transform.SetParent(father);
 
-            obj.transform.localPosition = Vector3.zero;
-            obj.transform.localScale = Vector3.one;
+            instance.transform.localPosition = Vector3.zero;
+            instance.transform.localScale = Vector3.one;
 
-            (obj.transform as RectTransform).offsetMax = Vector2.zero;
-            (obj.transform as RectTransform).offsetMin = Vector2.zero;
+            (instance.transform as RectTransform).offsetMax = Vector2.zero;
+            (instance.transform as RectTransform).offsetMin = Vector2.zero;
 
             //得到预设体身上的面板脚本
-            T panel = obj.GetComponent<T>();
-
+            T panel = instance.GetComponent<T>();
+            
             //处理面创建完成后的逻辑
             if (callBack != null)
                 callBack(panel);
