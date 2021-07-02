@@ -82,16 +82,18 @@ public class RoomGenerator : MonoBehaviour
     {
         maxX = Mathf.Abs(endRoom.transform.position.x / xOffset) + 1f;
         maxY = Mathf.Abs(endRoom.transform.position.y / yOffset) + 1f;
-        //transformCenter = new Vector3(endRoom.transform.position.x / 2, endRoom.transform.position.y / 2, 1);
+        transformCenter = new Vector3(endRoom.transform.position.x / 2, endRoom.transform.position.y / 2, 1);
         transform.localScale = new Vector3(maxX*2+2, maxY*2+3, 1);
         transform.position = transformCenter;
     }
 
     public void Update()
     {
+        //Boss死亡
         if (GameManager.instance.isBossDead)
         {
             endRoom.GetComponent<Room>().existdoor.SetActive(true);
+            UIManager.GetInstance().ShowPanel<FlagReward>("FlagReward", E_UI_Layer.Top,null);
         }
     }
 

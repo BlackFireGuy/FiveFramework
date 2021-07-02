@@ -5,19 +5,40 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseMenu : BasePanel
+public class FlagReward : BasePanel
 {
-    Button  playAgain, mainMenu;
-
+    public Button playAgain, mainMenu;
+    Button beSure;
+    public GameObject HomeMenu;
+    public GameObject Sure;
+    Text deadNum, pointNum;
     private void Start()
     {
         //resume = this.GetControl<Button>("Resume");
-        playAgain = this.GetControl<Button>("Play Again");
-        mainMenu = this.GetControl<Button>("Main Menu");
+        //playAgain = this.GetControl<Button>("Play Again");
+        //mainMenu = this.GetControl<Button>("Main Menu");
+        beSure = this.GetControl<Button>("Be Sure");
+        deadNum = this.GetControl<Text>("DeadNum");
+        pointNum = this.GetControl<Text>("PointNum");
+
+
+
 
         //resume.onClick.AddListener(ResumeGame);
         playAgain.onClick.AddListener(PlayAgain);
         mainMenu.onClick.AddListener(GoToMainMenu);
+        beSure.onClick.AddListener(ShowHomeMenu);
+
+        deadNum.text = PlayerPrefs.GetInt("DeadNumPerMatch").ToString();
+        pointNum.text = PlayerPrefs.GetInt("PointsPerMatch").ToString();
+
+    }
+
+    private void ShowHomeMenu()
+    {
+        HomeMenu.SetActive(true);
+        Sure.SetActive(false);
+
     }
 
     private void PlayAgain()
@@ -26,6 +47,8 @@ public class PauseMenu : BasePanel
         //ScenesMgr.GetInstance().RestartSccene();
         LevelLoader.instance.LoadNextLevel(SceneManager.GetActiveScene().buildIndex);
         MusicMgr.GetInstance().ClearSounds();
+        //胜利，则保存信息
+        GameSaveManager.instance.SaveGame();
     }
 
     private void GoToMainMenu()
@@ -38,8 +61,10 @@ public class PauseMenu : BasePanel
         //ScenesMgr.GetInstance().LoadScene(0, null);
         //ScenesMgr.GetInstance().LoadScene("Home", null);
         LevelLoader.instance.LoadNextLevel("Home");
+        PlayerInfoManager.instance.info.frontSucess++;
+
         //保存背包
-        //GameSaveManager.GetInstance().SaveGame();
+        GameSaveManager.instance.SaveGame();
 
     }
 
@@ -48,8 +73,11 @@ public class PauseMenu : BasePanel
         Time.timeScale = 1;
         UIManager.GetInstance().HidePanel("Pause Menu");
     }
+
+
     private void OnEnable()
     {
         Time.timeScale = 0;
+        
     }
 }

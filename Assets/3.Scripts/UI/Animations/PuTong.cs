@@ -3,7 +3,7 @@ using DG.Tweening;
 
 public class PuTong : MonoBehaviour
 {
-    public Vector3 pos;
+    //public Vector3 pos;
     void Start()
     {
         transform.localScale = transform.localScale / 2;

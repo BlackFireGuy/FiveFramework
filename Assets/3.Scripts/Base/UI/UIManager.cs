@@ -91,6 +91,10 @@ public class UIManager : BaseSingleton<UIManager>
                 case E_UI_Layer.Twice:
                     father = twice;
                     break;
+
+                default:
+                    father = system.parent;
+                    break;
                     
             }
             //设置父对象 设置相对位置和大小

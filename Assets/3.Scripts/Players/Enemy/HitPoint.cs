@@ -36,6 +36,15 @@ public class HitPoint : MonoBehaviour
     //碰撞效果在这里写
     public void OnTriggerEnter2D(Collider2D other)
     {
+        Attack(other);
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Attack(collision.collider);
+    }
+    private void Attack(Collider2D other)
+    {
         //Debug.Log("进入攻击触发器内");
         if (!isPlayer)//挂载在敌人身上
         {
@@ -46,7 +55,7 @@ public class HitPoint : MonoBehaviour
             if (other.CompareTag("Player"))
             {
                 other.GetComponent<IDamageable>().GetHit(damage);
-                
+
             }
             if (other.CompareTag("Bomb") && bombAvilable)
             {
@@ -62,7 +71,7 @@ public class HitPoint : MonoBehaviour
                 dir = 1;
             if (other.CompareTag("Enemy"))
             {
-                if(isAttacked == false)
+                if (isAttacked == false)
                 {
                     //避免重复伤害
                     other.GetComponent<IDamageable>().GetHit(PlayerInfoManager.instance.info.attack);
@@ -89,7 +98,7 @@ public class HitPoint : MonoBehaviour
                     //同时击退
                     //this.transform.parent.GetComponent<Enemy>().hitDialog.SetActive()
                     if (other.GetComponent<Enemy>().isBoss) return;
-                    Vector3 p2 = (other.transform.position - transform.position).normalized*2;
+                    Vector3 p2 = (other.transform.position - transform.position).normalized * 2;
 
                     other.transform.position = new Vector2(
                         other.transform.position.x + p2.x,
@@ -106,7 +115,6 @@ public class HitPoint : MonoBehaviour
                 //other.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.value*10, Random.value*10));
             }
         }
-        
     }
 
     /*void CallBack()

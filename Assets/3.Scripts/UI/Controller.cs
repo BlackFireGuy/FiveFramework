@@ -10,7 +10,7 @@ public class Controller : BasePanel
 
     public GameObject shootAttack;
 
-    Button skill, attack ,jump;
+    Button skill, attack ,jump,rush;
 
     PlayerController player;
 
@@ -22,17 +22,27 @@ public class Controller : BasePanel
         //skill = this.GetControl<Button>("Skill");
         attack = this.GetControl<Button>("Attack");
         jump = this.GetControl<Button>("Jump");
-
+        rush = this.GetControl<Button>("Rush");
         //skill.onClick.AddListener(SkillAttack);
-        
+
 
         attack.onClick.AddListener(NormalAttack);
         jump.onClick.AddListener(Jump);
+        rush.onClick.AddListener(Rush);
+    }
+
+    private void Rush()
+    {
+        // 角色冲刺
+        if (player != null)
+        {
+            player.RushController();
+        }
     }
 
     private void Jump()
     {
-        //角色放技能
+        //角色跳
         if (player != null)
         {
             player.JumpController();

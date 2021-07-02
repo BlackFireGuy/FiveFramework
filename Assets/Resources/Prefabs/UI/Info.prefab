@@ -2227,7 +2227,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u524D\u6E38\u6210\u529F\u6B21\u6570\uFF1A"
+  m_Text: "\u6311\u6218\u6210\u529F\u6B21\u6570\uFF1A"
 --- !u!1 &373778680898245187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,7 +2305,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u56DE\u6EAF\u6210\u529F\u6B21\u6570\uFF1A"
+  m_Text: "\u6B7B\u4EA1\u6B21\u6570\uFF1A"
 --- !u!1 &373778680923944183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2318,7 @@ GameObject:
   - component: {fileID: 373778680923944180}
   - component: {fileID: 373778680923944181}
   m_Layer: 5
-  m_Name: forenttSucces
+  m_Name: forentSuccess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2831,7 +2831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &373778681259041174
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,7 +3685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1056227014031213307
 GameObject:
   m_ObjectHideFlags: 0
@@ -3996,7 +3994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1445448419103303822
 GameObject:
   m_ObjectHideFlags: 0
@@ -4129,7 +4126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &1580672426723264709
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,7 +5124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2654368190526168101
 GameObject:
   m_ObjectHideFlags: 0
@@ -5992,7 +5987,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3040209485779432626
 GameObject:
   m_ObjectHideFlags: 0
@@ -6651,7 +6645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &3638731572214206511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7729,7 +7722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &4588235020211531259
 GameObject:
   m_ObjectHideFlags: 0
@@ -8923,7 +8915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &5853988078538389582
 GameObject:
   m_ObjectHideFlags: 0
@@ -9419,7 +9410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6256643386203316026
 GameObject:
   m_ObjectHideFlags: 0
@@ -9498,7 +9488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4F60\u4ECA\u5E7435\u5C81\uFF0C\u957F\u5F97\u5B8C\u7F8E\u65E0\u7F3A\u3002\n\u8EAB\u4F53\u5B71\u5F31\uFF0C\u884C\u52A8\u8FDF\u7F13\u3002\n\u8EAB\u65E0\u5206\u6587\uFF0C\u524D\u9014\u582A\u5FE7\u3002"
+  m_Text: "\u4F60\u4ECA\u5E7469\u5C81\uFF0C\u957F\u5F97\u5B8C\u7F8E\u65E0\u7F3A\u3002\n\u8EAB\u4F53\u5B71\u5F31\uFF0C\u884C\u52A8\u8FDF\u7F13\u3002\n\u8EAB\u65E0\u5206\u6587\uFF0C\u524D\u9014\u582A\u5FE7\u3002"
 --- !u!1 &6271943856019230253
 GameObject:
   m_ObjectHideFlags: 0
@@ -11932,7 +11922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e33674633da1f4fb05d68008781ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!1 &8690615963689422987
 GameObject:
   m_ObjectHideFlags: 0

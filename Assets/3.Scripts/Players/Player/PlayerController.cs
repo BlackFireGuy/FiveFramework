@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 /// <summary>
 /// 控制行走行动，跳跃，和攻击的中枢转移控制
 /// </summary>
@@ -37,14 +38,16 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float attackRate;
     public Transform ShootParent;
 
+    
+
     [Header("技能和装备")]
     public Inventory inventorySkill;
 
 
-    [Header("死亡时需要禁止的脚本")]
+    [Header("死亡时需要禁止的脚本& 物体")]
     public  Behaviour[] lists;
-
-
+    public GameObject[] ListO;
+    bool hasDesDead;//是否进行过死亡之后的处理
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -80,12 +83,20 @@ public class PlayerController : MonoBehaviour, IDamageable
         ani.SetBool("dead", isDead);
         
         if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
-        if (isDead) {
+        if (isDead&& !hasDesDead) {
             for(int i = 0; i < lists.Length; i++)
             {
                 lists[i].enabled = false;
             }
-            
+            for(int i = 0; i < ListO.Length; i++)
+            {
+                Destroy(ListO[i]);
+            }
+            PlayerPrefs.SetInt("DeadNumPerMatch", PlayerPrefs.GetInt("DeadNumPerMatch")+1);
+            PlayerInfoManager.instance.info.pastSucess ++ ;
+            PlayerInfoManager.instance.info.currentHp = PlayerInfoManager.instance.info.maxHp;
+            GameSaveManager.instance.SaveGame();
+            hasDesDead = true;
             return;
         } 
         if (bhit.beAttacking) return;
@@ -142,8 +153,7 @@ public class PlayerController : MonoBehaviour, IDamageable
             //血条不动
             healthBar.transform.localEulerAngles = new Vector3(0, 180, 0);
         }
-
-        GameManager.instance.horizontal = horizontalInput;
+        
 
 
         if (Input.GetKeyDown("space"))
@@ -192,6 +202,11 @@ public class PlayerController : MonoBehaviour, IDamageable
                 //血条不动
                 healthBar.transform.localEulerAngles = new Vector3(0, 180, 0);
             }
+
+            if (horizontalInput > 0)
+                GameManager.instance.horizontal = horizontalInput;
+            else
+                GameManager.instance.horizontal = Input.GetAxisRaw("Horizontal");
             if (horizontalInput < 0.0001f&&horizontalInput>-0.0001f) return;
             GameManager.instance.horizontal = horizontalInput;
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
@@ -242,8 +257,18 @@ public class PlayerController : MonoBehaviour, IDamageable
             nextAttack = Time.time + attackRate;*/
         }
     }
-
-
+    internal void RushController()
+    {
+        if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
+        if (isDead) return;
+        //被攻击不允许冲刺
+        if (bhit.isAttacked) return;
+        //如果速度不低于speed,就不允许冲刺
+        if (rb.velocity.x > speed|| rb.velocity.x < -speed) return;
+        ani.SetTrigger("Rush");
+        rb.AddForce(new Vector2((float)BeatManager.instance.playerForwardDir,0)*800 );
+        Debug.Log(new Vector2((float)BeatManager.instance.playerForwardDir, 0));
+    }
     //--------------------------------------------------------------------------
     // 搭载装备的实现
     private void SkillInit(GameObject arg0)

@@ -87,7 +87,7 @@ public class InfoPanel : BasePanel
         time = this.GetControl<Text>("time");
         playTime = this.GetControl<Text>("playTime");
         pastSuccess = this.GetControl<Text>("pastSuccess");
-        forentSucces = this.GetControl<Text>("forentSucces");
+        forentSucces = this.GetControl<Text>("forentSuccess");
 
         //-------------------------------
 
@@ -241,7 +241,9 @@ public class InfoPanel : BasePanel
 
         //我踏马就把它注掉就可以了！，你妹的为啥啊，草，这个函数会new一个新的，我踏马浪废了这么多时间
         //time.text = (PlayerInfoManager.instance.LoadPlayerInfo().playTime/3600).ToString();
-
+        //--------------
+        pastSuccess.text = PlayerInfoManager.instance.info.pastSucess.ToString();
+        forentSucces.text = PlayerInfoManager.instance.info.frontSucess.ToString();
         //---------------
         playTime.text = PlayerInfoManager.instance.info.playTime.ToString();
 

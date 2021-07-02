@@ -13,6 +13,9 @@ public class Points : MonoBehaviour
             {
                 PlayerInfoManager.instance.info.points++;
                 PoolMgr.GetInstance().PushObj(path,this.gameObject);
+
+                PlayerPrefs.SetInt("PointsPerMatch", PlayerPrefs.GetInt("PointsPerMatch") + 1);
+
             }
         }
     }

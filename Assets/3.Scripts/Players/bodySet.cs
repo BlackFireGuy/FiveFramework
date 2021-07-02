@@ -24,7 +24,7 @@ public class bodySet :MonoBehaviour
                 isAddForce = true;
             }
             
-            rigidbody2.gravityScale = MyRandom.GetRandomNumber(1,3);
+            rigidbody2.gravityScale = MyRandom.GetRandomNumber(1,4);
             collider2.isTrigger = false;
         }
     }

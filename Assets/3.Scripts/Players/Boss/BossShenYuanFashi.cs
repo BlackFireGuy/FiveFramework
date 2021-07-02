@@ -16,6 +16,8 @@ public class BossShenYuanFashi : Enemy,IDamageable
             {
                 health = 0;
                 isDead = true;
+                
+                Object.Destroy(gameObject, 1f);
             }
             ani.SetTrigger("hit");
         }

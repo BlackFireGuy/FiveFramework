@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         gameMode = GameMode.Normal;
+
+        
     }
 
     private void Update()
@@ -87,10 +89,13 @@ public class GameManager : MonoBehaviour
                 {
                     Instantiate(Objs[i]).transform.position = ObjPos.position - i * Vector3.right;
                 }
+                PlayerPrefs.SetInt("CG", 1);
+                PlayerPrefs.SetInt("DeadNumPerMatch", 0);
+                PlayerPrefs.SetInt("PointsPerMatch", 0);
             }
             else
             {
-                PlayerPrefs.GetInt("CG", 1);
+                PlayerPrefs.SetInt("PointsPerMatch", 0);
                 SetGameModeNormal();
             }
 
@@ -98,6 +103,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            if (!GameManager.instance.isInMap)
+            {
+                
+                PlayerPrefs.SetInt("DeadNumPerMatch", 0);
+                PlayerPrefs.SetInt("PointsPerMatch", 0);
+            }
             SetGameModeNormal();
         }
         
