@@ -257,6 +257,9 @@ public class PlayerController : MonoBehaviour, IDamageable
             nextAttack = Time.time + attackRate;*/
         }
     }
+    /// <summary>
+    /// 玩家冲刺
+    /// </summary>
     internal void RushController()
     {
         if (GameManager.instance.gameMode != GameManager.GameMode.Normal) return;
@@ -266,8 +269,10 @@ public class PlayerController : MonoBehaviour, IDamageable
         //如果速度不低于speed,就不允许冲刺
         if (rb.velocity.x > speed|| rb.velocity.x < -speed) return;
         ani.SetTrigger("Rush");
+        rb.velocity = new Vector2(rb.velocity.x, 0); ;
+
         rb.AddForce(new Vector2((float)BeatManager.instance.playerForwardDir,0)*800 );
-        Debug.Log(new Vector2((float)BeatManager.instance.playerForwardDir, 0));
+        
     }
     //--------------------------------------------------------------------------
     // 搭载装备的实现

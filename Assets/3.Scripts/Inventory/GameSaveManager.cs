@@ -24,6 +24,7 @@ public class GameSaveManager : MonoBehaviour
     [Header("技能树")]
     public List<SkillTree> skillTrees = new List<SkillTree>();
     string mainInfoDir = "/infomation.txt";
+    string playerStateDir = "/playerState.txt";
     /// <summary>
     /// 1经过传送门时保存
     /// 2升级技能树时保存
@@ -36,6 +37,7 @@ public class GameSaveManager : MonoBehaviour
     {
         SaveInventory();
         SavePlayerInfo();
+        Debug.Log("保存");
     }
     /// <summary>
     /// 游戏开始时读取存档，没有存档则返回
@@ -44,6 +46,7 @@ public class GameSaveManager : MonoBehaviour
     {
         LoadInventory();
         LoadPlayerInfo();
+        Debug.Log("载入");
     }
 
     public void NewGame()
@@ -51,13 +54,17 @@ public class GameSaveManager : MonoBehaviour
         if (!Directory.Exists(Application.persistentDataPath + path))
         {
             Directory.CreateDirectory(Application.persistentDataPath + path);
+            
+
+
         }
         else
         {
             Directory.Delete(Application.persistentDataPath + path, true);
             Directory.CreateDirectory(Application.persistentDataPath + path);
+            
         }
-
+        PlayerPrefs.DeleteAll();
     }
 
     public bool IsSaved()
@@ -158,9 +165,22 @@ public class GameSaveManager : MonoBehaviour
 
         formatter.Serialize(file, json);
         file.Close();
+
+        //playerstate
+        if (!Directory.Exists(Application.persistentDataPath + path))
+        {
+            Directory.CreateDirectory(Application.persistentDataPath + path);
+        }
+        BinaryFormatter formatter1 = new BinaryFormatter();//二进制转化
+
+        FileStream file1 = File.Create(Application.persistentDataPath + path + playerStateDir);
+        var json1 = JsonUtility.ToJson(Playerstate.instance.info);
+
+        formatter.Serialize(file1, json1);
+        file1.Close();
     }
     /// <summary>
-    /// 载入玩家信息
+    /// 载入玩家信息，貌似还需要同时保存和载入PlayerState, 貌似还是可以合到一起的
     /// </summary>
     public void LoadPlayerInfo()
     {
@@ -171,5 +191,17 @@ public class GameSaveManager : MonoBehaviour
             JsonUtility.FromJsonOverwrite((string)bf.Deserialize(file), PlayerInfoManager.instance.info);
             file.Close();
         }
+        //playerstate
+        BinaryFormatter bf1 = new BinaryFormatter();
+        if (File.Exists(Application.persistentDataPath + path + playerStateDir))
+        {
+            FileStream file1 = File.Open(Application.persistentDataPath + path + playerStateDir, FileMode.Open);
+            //坑：JsonUtility
+            //1.只能解析单个对象，不能解析多个对象（即对象是数组）必须套个壳子，让其变成一个元素
+            JsonUtility.FromJsonOverwrite((string)bf1.Deserialize(file1), Playerstate.instance.info);
+            file1.Close();
+        }
+
+
     }
 }

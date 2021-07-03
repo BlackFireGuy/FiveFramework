@@ -74,9 +74,10 @@ public class Door : MonoBehaviour
             //LevelLoader.instance.End();
         }*/
         OpenDoor();
-        yield return new WaitForSeconds(time);
         //进入触发门，则保存信息
         GameSaveManager.instance.SaveGame();
+        yield return new WaitForSeconds(time);
+        
         LevelLoader.instance.LoadNextLevel(scene);
     }
 

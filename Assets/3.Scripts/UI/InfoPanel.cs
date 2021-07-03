@@ -41,6 +41,7 @@ public class InfoPanel : BasePanel
     Text playTime;
     Text pastSuccess;
     Text forentSucces;
+    Text points;
     //--------------------------------
     //--------------------------------
     Button skillEquip;
@@ -88,7 +89,7 @@ public class InfoPanel : BasePanel
         playTime = this.GetControl<Text>("playTime");
         pastSuccess = this.GetControl<Text>("pastSuccess");
         forentSucces = this.GetControl<Text>("forentSuccess");
-
+        points = this.GetControl<Text>("points");
         //-------------------------------
 
         skillEquip = this.GetControl<Button>("skillEquip");
@@ -244,6 +245,7 @@ public class InfoPanel : BasePanel
         //--------------
         pastSuccess.text = PlayerInfoManager.instance.info.pastSucess.ToString();
         forentSucces.text = PlayerInfoManager.instance.info.frontSucess.ToString();
+        points.text = PlayerInfoManager.instance.info.points.ToString();
         //---------------
         playTime.text = PlayerInfoManager.instance.info.playTime.ToString();
 

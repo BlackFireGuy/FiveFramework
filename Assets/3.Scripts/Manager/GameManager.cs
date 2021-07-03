@@ -92,10 +92,12 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.SetInt("CG", 1);
                 PlayerPrefs.SetInt("DeadNumPerMatch", 0);
                 PlayerPrefs.SetInt("PointsPerMatch", 0);
+                GameSaveManager.instance.SaveGame();//是不是新游戏的时候要先保存一下现有的状态
             }
             else
             {
                 PlayerPrefs.SetInt("PointsPerMatch", 0);
+                
                 SetGameModeNormal();
             }
 
@@ -108,6 +110,12 @@ public class GameManager : MonoBehaviour
                 
                 PlayerPrefs.SetInt("DeadNumPerMatch", 0);
                 PlayerPrefs.SetInt("PointsPerMatch", 0);
+
+            }
+            else
+            {
+                
+                
             }
             SetGameModeNormal();
         }

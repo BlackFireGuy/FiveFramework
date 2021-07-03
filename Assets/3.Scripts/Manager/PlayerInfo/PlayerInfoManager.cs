@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Playerstate))]
 public class PlayerInfoManager : MonoBehaviour
 {
     public static PlayerInfoManager instance;
@@ -16,7 +17,7 @@ public class PlayerInfoManager : MonoBehaviour
         }
             
     }
-
+    Playerstate playerstate;
     [Header("运行时观测")]
     public PlayerInfomation info;
     public ItemData infoItemData;
@@ -162,23 +163,35 @@ public class PlayerInfoManager : MonoBehaviour
     public void Start()
     {
         //TimerMgr.instance.CreateTimerAndStart(60, -1, SaveGame);
+        playerstate = GetComponent<Playerstate>();
+        playerstate.enabled = true;
         SyncInfo();
         //升级时同步过来数据 
         EventCenter.GetInstance().AddEventListener(EventCfg.LEVEL_UP,SyncInfo);
+        EventCenter.GetInstance().AddEventListener<int>(EventCfg.ADD_EXP, SyncInfoExp);
+    }
+    void SyncInfoExp(int exp)
+    {
+        SyncInfo();
+        GameSaveManager.instance.SaveGame();
     }
     void SyncInfo()
     {
-        info.playerName = Playerstate.instance.playerName;
-        info.description = Playerstate.instance.description;
-        info.playerLevel = Playerstate.instance.playerLevel;
-        info.maxLevel = Playerstate.instance.maxLevel;
-        info.maxHp = Playerstate.instance.maxHp ;
-        info.maxMp = Playerstate.instance.maxMp ;
-        info.currentHp = Playerstate.instance.currentHp ;
-        info.currentMp = Playerstate.instance.currentMp ;
-        info.attack = Playerstate.instance.attack ;
-        info.hitResistance = Playerstate.instance.defense;
-        info.nextlevelExp = Playerstate.instance.nextlevelExp[Playerstate.instance.playerLevel];
+        playerstate.enabled = true;
+
+        info.playerName = Playerstate.instance.info.playerName;
+        info.description = Playerstate.instance.info.description;
+        info.playerLevel = Playerstate.instance.info.playerLevel;
+        info.maxLevel = Playerstate.instance.info.maxLevel;
+        info.maxHp = Playerstate.instance.info.maxHp ;
+        info.maxMp = Playerstate.instance.info.maxMp ;
+        info.currentHp = Playerstate.instance.info.currentHp ;
+        info.currentMp = Playerstate.instance.info.currentMp ;
+        info.attack = Playerstate.instance.info.attack ;
+        info.hitResistance = Playerstate.instance.info.defense;
+        info.nextlevelExp = Playerstate.instance.info.nextlevelExp[Playerstate.instance.info.playerLevel];
+
+        //
     }
 
     /*

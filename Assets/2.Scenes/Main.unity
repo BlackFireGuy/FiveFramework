@@ -927,18 +927,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b426c957f31d6f24a9019f047706bc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: "\u6492\u5927\u5927"
-  description: "\u7B2C\u4E00\u4E2A\u73A9\u5BB6"
-  playerLevel: 1
-  maxLevel: 10
-  currentExp: 0
-  nextlevelExp: 
-  currentHp: 111
-  currentMp: 222
-  maxHp: 222
-  maxMp: 222
-  attack: 100
-  defense: 10
+  info:
+    playerName: "\u5C0F\u9ED1"
+    description: "\u7B2C\u4E00\u62B9\u9ED1\u8272\u7684\u788E\u7247"
+    playerLevel: 1
+    maxLevel: 40
+    currentExp: 0
+    nextlevelExp: 
+    currentHp: 50
+    currentMp: 100
+    maxHp: 100
+    maxMp: 100
+    attack: 10
+    defense: 5
 --- !u!114 &176295920
 MonoBehaviour:
   m_ObjectHideFlags: 0

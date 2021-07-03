@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     public HitPoint hit;
     [Header("Base State")]
     public float health;
+    public float attack;
     public float armor;
     public bool isBoss;
     public int exp;
@@ -106,8 +107,8 @@ public class Enemy : MonoBehaviour
             //掉落物体
             if(!isGifted)
                 GiveGifts();
-            //给玩家增加经验
-            EventCenter.GetInstance().EventTrigger(EventCfg.ADD_EXP, exp);
+            
+
             return;
         }
         currentState.OnUpdate(this);
@@ -157,7 +158,7 @@ public class Enemy : MonoBehaviour
         /*Vector3 dir = (targetPoint.position - transform.position).normalized*distance;
         transform.position = Vector2.MoveTowards(transform.position,targetPoint.position-dir, speed * Time.deltaTime);//* Time.deltaTime在不同机器上获得同样的效果
         FilpDirection();*/
-        transform.position = Vector2.MoveTowards(transform.position, targetPoint.position , speed * Time.deltaTime);//* Time.deltaTime在不同机器上获得同样的效果
+        transform.position = Vector2.MoveTowards(transform.position, targetPoint.position - transform.up , speed * Time.deltaTime);//* Time.deltaTime在不同机器上获得同样的效果
         FilpDirection();
 
     }

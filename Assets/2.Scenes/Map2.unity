@@ -894,6 +894,21 @@ PrefabInstance:
       propertyPath: m_ApplyToSortingLayers.Array.data[7]
       value: 157812041
       objectReference: {fileID: 0}
+    - target: {fileID: 9179705744990316804, guid: 958a83c843d5710469869504b076c96f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179705744990316804, guid: 958a83c843d5710469869504b076c96f,
+        type: 3}
+      propertyPath: info.playerName
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179705744990316804, guid: 958a83c843d5710469869504b076c96f,
+        type: 3}
+      propertyPath: info.description
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 958a83c843d5710469869504b076c96f, type: 3}
 --- !u!4 &1799446248 stripped

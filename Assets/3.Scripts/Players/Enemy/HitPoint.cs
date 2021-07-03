@@ -17,19 +17,18 @@ public class HitPoint : MonoBehaviour
     private void Start()
     {
         //t = TimerMgr.instance.CreateTimer(0.2f, -1, CallBack);
+        /*if (!isPlayer)//挂载在敌人身上
+        {
+            if (this.transform.parent.GetComponent<Enemy>() == null) return;
+            damage = this.transform.parent.GetComponent<Enemy>().attack;
+        }*/
     }
 
     private void Update()
     {
-        TimerMgr.instance.Loop(Time.deltaTime);
-
-        if (!isPlayer)//挂载在敌人身上
-        {
-            if (this.transform.parent.GetComponent<Enemy>() == null) return;
-            damage = this.transform.parent.GetComponent<Enemy>().armor;
-        }
+        //TimerMgr.instance.Loop(Time.deltaTime);
         
-            
+
     }
 
 

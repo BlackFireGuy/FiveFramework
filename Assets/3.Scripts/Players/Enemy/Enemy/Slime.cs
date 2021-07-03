@@ -7,7 +7,7 @@ public class Slime : Enemy, IDamageable
     public void GetHit(float damage)
     {
         MusicMgr.GetInstance().PlaySound("Po");
-        damage -= armor;
+        //damage -= armor;
         if (damage > 0)
         {
             health -= damage;
@@ -15,7 +15,10 @@ public class Slime : Enemy, IDamageable
             if (health < 1)
             {
                 health = 0;
+                //给玩家增加经验
+                EventCenter.GetInstance().EventTrigger(EventCfg.ADD_EXP, exp);
                 isDead = true;
+
             }
             ani.SetTrigger("hit");
         }
@@ -33,7 +36,8 @@ public class Slime : Enemy, IDamageable
             health = health * (1 + (PlayerInfoManager.instance.info.pastSucess + PlayerInfoManager.instance.info.frontSucess)/10);
             healthBar.maxHp = health;
             //攻击力也提升
-            hit.damage = hit.damage * (1 + (PlayerInfoManager.instance.info.pastSucess + PlayerInfoManager.instance.info.frontSucess) / 10);
+            attack = attack * (1 + (PlayerInfoManager.instance.info.pastSucess + PlayerInfoManager.instance.info.frontSucess) / 10);
+            hit.damage = attack;
             //防御也提升
             armor = armor * (1 + (PlayerInfoManager.instance.info.pastSucess + PlayerInfoManager.instance.info.frontSucess) / 10);
             //移动速度也提升

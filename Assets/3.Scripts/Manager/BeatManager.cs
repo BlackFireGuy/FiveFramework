@@ -67,8 +67,17 @@ public class BeatManager : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
         //根据摇杆判断击打方向
-        CheckInpout(joystick.Horizontal, joystick.Vertical);
-        CheckInpout(hor, ver);
+        if(ver >0 || hor > 0)
+        {
+            CheckInpout(hor, ver);
+            
+        }
+        else
+        {
+            CheckInpout(joystick.Horizontal, joystick.Vertical);
+        }
+        
+        
 
     }
 
