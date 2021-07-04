@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+/// <summary>
+/// 
+/// Application.persistentDataPath   /storage/emulated/0/Android/data/package name/files
+/// </summary>
 public class GameSaveManager : MonoBehaviour
 {
     public static GameSaveManager instance;
@@ -16,6 +20,7 @@ public class GameSaveManager : MonoBehaviour
         {
             Destroy(this);
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     string path = "/game_SaveData";
@@ -37,6 +42,7 @@ public class GameSaveManager : MonoBehaviour
     {
         SaveInventory();
         SavePlayerInfo();
+        //MyDebugConsole.instance.MyDebug("保存");
         Debug.Log("保存");
     }
     /// <summary>
@@ -47,23 +53,27 @@ public class GameSaveManager : MonoBehaviour
         LoadInventory();
         LoadPlayerInfo();
         Debug.Log("载入");
+        //MyDebugConsole.instance.MyDebug("载入");
     }
 
     public void NewGame()
     {
         if (!Directory.Exists(Application.persistentDataPath + path))
         {
-            Directory.CreateDirectory(Application.persistentDataPath + path);
             
-
+            Directory.CreateDirectory(Application.persistentDataPath + path);
+            Directory.Delete(Application.persistentDataPath + path, true);
+            Directory.CreateDirectory(Application.persistentDataPath + path);
+            Debug.Log("无文件夹的清空文件夹");
 
         }
         else
         {
             Directory.Delete(Application.persistentDataPath + path, true);
             Directory.CreateDirectory(Application.persistentDataPath + path);
-            
+            Debug.Log("有文件夹的清空文件夹");
         }
+        
         PlayerPrefs.DeleteAll();
     }
 

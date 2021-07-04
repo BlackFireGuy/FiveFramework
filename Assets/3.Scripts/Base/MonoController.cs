@@ -22,6 +22,9 @@ public class MonoController : MonoBehaviour
     {
         if (updateEvent != null)
             updateEvent();
+
+        
+
     }
 
     /// <summary>

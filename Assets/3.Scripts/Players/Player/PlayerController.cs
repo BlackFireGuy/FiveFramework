@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     private Animator ani;
     private ArmourHit ahit;
     private BodyHit bhit;
-    private FloatingJoystick joystick;
+    private FixedJoystick joystick;
     private HealthBarSlider healthBar;
     
 
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         ani = GetComponent<Animator>();
         ahit = GetComponent<ArmourHit>();
         bhit = GetComponent<BodyHit>();
-        joystick = FindObjectOfType<FloatingJoystick>();
+        joystick = FindObjectOfType<FixedJoystick>();
         healthBar = GetComponentInChildren<HealthBarSlider>();
 
         GameManager.instance.IsPlayer(this);//告诉游戏管理这我就是玩家
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         } 
         if (bhit.beAttacking) return;
         if (joystick == null)
-            joystick = FindObjectOfType<FloatingJoystick>();
+            joystick = FindObjectOfType<FixedJoystick>();
 
         healthBar.maxHp = PlayerInfoManager.instance.info.maxHp;
         healthBar.hp = PlayerInfoManager.instance.info.currentHp;

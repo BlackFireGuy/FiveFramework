@@ -97,11 +97,20 @@ public class HitPoint : MonoBehaviour
                     //同时击退
                     //this.transform.parent.GetComponent<Enemy>().hitDialog.SetActive()
                     if (other.GetComponent<Enemy>().isBoss) return;
-                    Vector3 p2 = (other.transform.position - transform.position).normalized * 2;
-
-                    other.transform.position = new Vector2(
-                        other.transform.position.x + p2.x,
-                        other.transform.position.y + p2.y);
+                    Vector3 p2 = (other.transform.position-transform.up - transform.position).normalized ;
+                    if (p2.x > 0)
+                    {
+                        other.transform.position = new Vector2(
+                        other.transform.position.x + 0.5f,
+                        other.transform.position.y);
+                    }
+                    else
+                    {
+                        other.transform.position = new Vector2(
+                        other.transform.position.x - 0.5f,
+                        other.transform.position.y);
+                    }
+                    
                 }
 
             }

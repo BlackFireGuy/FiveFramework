@@ -29,12 +29,12 @@ public class EasyEditor : Editor
     [MenuItem("Custom/GotoMap1")]
     public static void GotoMap1()
     {
-        EditorSceneManager.OpenScene(Application.dataPath + "/2.Scenes/Map1.unity");
+        EditorSceneManager.OpenScene(Application.dataPath + "/2.Scenes/Map_FTG.unity");
     }
     [MenuItem("Custom/GotoMap2")]
     public static void GotoMap2()
     {
-        EditorSceneManager.OpenScene(Application.dataPath + "/2.Scenes/Map2.unity");
+        EditorSceneManager.OpenScene(Application.dataPath + "/2.Scenes/Map_AVG.unity");
     }
     //把配置文件放入Resources目录下
     [MenuItem("Custom/ConfigToResources")]

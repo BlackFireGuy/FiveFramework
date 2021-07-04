@@ -9,6 +9,7 @@ public class DialogSystem : MonoBehaviour
     public Text textLabel;
     public Image faceImage;
     public float textSpeed;
+    
     int index = 0;
     bool textFinished;
     
@@ -42,7 +43,9 @@ public class DialogSystem : MonoBehaviour
         }
         if ((DialogManager.instance.isattack || (Input.GetKeyDown(KeyCode.R))) && textFinished)
         {
-            StartCoroutine(SetTextUI());
+            
+                StartCoroutine(SetTextUI());
+            
         }
 
         //离开一定区域，这里是指离开触发器，也就是npc身上的button不显示，则关闭dialog，并初始化
@@ -55,8 +58,9 @@ public class DialogSystem : MonoBehaviour
         }
     }
 
+    
 
-   IEnumerator SetTextUI()
+    IEnumerator SetTextUI()
    {
         if(textfile != null)
         {

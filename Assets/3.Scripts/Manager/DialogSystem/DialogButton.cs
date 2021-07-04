@@ -14,7 +14,7 @@ public class DialogButton : MonoBehaviour
     [Header("头像")]
     public Sprite face01, face02;
 
-    public bool beginTalk;
+    //public bool beginTalk;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {

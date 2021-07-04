@@ -69,6 +69,8 @@ public class GameManager : MonoBehaviour
             UIManager.GetInstance().ShowPanel<GameOverPanel>("Game Over Panel", E_UI_Layer.Mid, null);
             isgameoverpaenlshowed = true;
         }
+
+        
     }
     public void Start()
     {
@@ -119,9 +121,8 @@ public class GameManager : MonoBehaviour
             }
             SetGameModeNormal();
         }
-        
 
-        
+
 
     }
     public void SetGameModeNormal()
@@ -166,7 +167,9 @@ public class GameManager : MonoBehaviour
             GameObject obj = ResMgr.GetInstance().Load<GameObject>("Prefabs/Player/BlackMan4");
             obj.transform.position = bornPos.position;
         }
-        
+
+
+        Debug.Log(Playerstate.instance.info.nextlevelExp.Length.ToString());
         //播放音乐
         //MusicMgr.GetInstance().PlayBMusic("BK1");
     }

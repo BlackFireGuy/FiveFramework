@@ -33,13 +33,13 @@ public class BeatManager : MonoBehaviour
     public float rate = 1;
     public float attacktime = 0;//敌人受击和我方攻击时更新
 
-    private FloatingJoystick joystick;
+    private FixedJoystick joystick;
     
     private void Update()
     {
         if (joystick == null)
         {
-            joystick = FindObjectOfType<FloatingJoystick>();
+            joystick = FindObjectOfType<FixedJoystick>();
             return;
         }
             
@@ -67,16 +67,17 @@ public class BeatManager : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
         //根据摇杆判断击打方向
-        if(ver >0 || hor > 0)
+        if(Mathf.Abs(ver) >0.01 || Mathf.Abs(hor) > 0.01)
         {
             CheckInpout(hor, ver);
-            
+            GameManager.instance.vertical = ver;
         }
         else
         {
             CheckInpout(joystick.Horizontal, joystick.Vertical);
+            GameManager.instance.vertical = joystick.Vertical;
         }
-        
+
         
 
     }

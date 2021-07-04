@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/2.Scenes/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/2.Scenes/Map1.unity
+    path: Assets/2.Scenes/Map_FTG.unity
     guid: a31538760ced8ba4ca48bc939779f37e
   - enabled: 1
-    path: Assets/2.Scenes/Map2.unity
+    path: Assets/2.Scenes/Map_AVG.unity
     guid: 5c19ad7bc670bda44ac51e924ae73930
   m_configObjects: {}

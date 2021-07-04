@@ -67,6 +67,7 @@
     <Compile Include="Assets\3.Scripts\AnimationBehaviours\SetNormalizedTime.cs" />
     <Compile Include="Assets\3.Scripts\Base\AdsManager.cs" />
     <Compile Include="Assets\3.Scripts\Base\BaseSingleton.cs" />
+    <Compile Include="Assets\3.Scripts\Base\DebugConsole.cs" />
     <Compile Include="Assets\3.Scripts\Base\EventCenter.cs" />
     <Compile Include="Assets\3.Scripts\Base\EventCfg.cs" />
     <Compile Include="Assets\3.Scripts\Base\MonoController.cs" />
@@ -198,6 +199,8 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\MuTouRen.cs" />
+    <None Include="Assets\0.Art\0.DialogFile\file5.txt" />
     <None Include="Assets\0.Art\0.DialogFile\file3.txt" />
     <None Include="Assets\0.Art\0.DialogFile\file4.txt" />
     <None Include="Assets\0.Art\0.DialogFile\file2.txt" />

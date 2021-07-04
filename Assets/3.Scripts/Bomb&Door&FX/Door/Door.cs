@@ -7,7 +7,7 @@ public class Door : MonoBehaviour
     Animator ani;
     BoxCollider2D coll;
     [Header("去往的世界")]
-    public bool istrigger;
+    //public bool istrigger;
     public int scene;
 
     public int crossNum;
@@ -28,7 +28,8 @@ public class Door : MonoBehaviour
     public void OpenDoor()
     {
         Debug.Log("播放开门动画");
-        ani.SetTrigger("open");
+        if(ani != null)
+            ani.SetTrigger("open");
         coll.enabled = true;
     }
 
@@ -73,12 +74,16 @@ public class Door : MonoBehaviour
             LevelLoader.instance.SetCrossActive(crossNum);
             //LevelLoader.instance.End();
         }*/
-        OpenDoor();
+        
         //进入触发门，则保存信息
         GameSaveManager.instance.SaveGame();
         yield return new WaitForSeconds(time);
-        
+        OpenDoor();
         LevelLoader.instance.LoadNextLevel(scene);
+        Debug.Log(scene);
     }
-
+    /*private void Update()
+    {
+        Debug.Log(scene);
+    }*/
 }
