@@ -38,12 +38,16 @@ public class FlagReward : BasePanel
     {
         HomeMenu.SetActive(true);
         Sure.SetActive(false);
+        Destroy(Sure.gameObject);
+        Debug.Log("testsss");
 
+        /*UIManager.GetInstance().HideAllPanel();
+        UIManager.GetInstance().ShowPanel<FlagReward>("RewardbackHome",E_UI_Layer.Mid);*/
     }
 
     private void PlayAgain()
     {
-        Time.timeScale = 1;
+        
         //ScenesMgr.GetInstance().RestartSccene();
         LevelLoader.instance.LoadNextLevel(SceneManager.GetActiveScene().buildIndex);
         MusicMgr.GetInstance().ClearSounds();
@@ -54,7 +58,7 @@ public class FlagReward : BasePanel
     private void GoToMainMenu()
     {
         //恢复时间流动
-        Time.timeScale = 1;
+        
         //清空音效
         MusicMgr.GetInstance().ClearSounds();
         //载入场景
@@ -70,14 +74,14 @@ public class FlagReward : BasePanel
 
     private void ResumeGame()
     {
-        Time.timeScale = 1;
+        
         UIManager.GetInstance().HidePanel("Pause Menu");
     }
 
 
     private void OnEnable()
     {
-        Time.timeScale = 0;
+        
         
     }
 }

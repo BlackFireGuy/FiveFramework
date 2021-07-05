@@ -18,6 +18,7 @@ public class Slime : Enemy, IDamageable
                 //给玩家增加经验
                 EventCenter.GetInstance().EventTrigger(EventCfg.ADD_EXP, exp);
                 isDead = true;
+                Destroy(this.gameObject,1f);
 
             }
             ani.SetTrigger("hit");

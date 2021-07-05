@@ -146,6 +146,8 @@ public class GameManager : MonoBehaviour
             UIManager.GetInstance().ShowPanel<PauseButton>("Pause Button", E_UI_Layer.Mid, null);
             //UIManager.GetInstance().ShowPanel<BagPanel>("Bag Panel", E_UI_Layer.Mid, null);
             UIManager.GetInstance().ShowPanel<Controller>("Controller", E_UI_Layer.Mid, null);
+            MusicMgr.GetInstance().PlayBMusic("BK5");
+            
         }
         else
         {
@@ -153,6 +155,7 @@ public class GameManager : MonoBehaviour
             UIManager.GetInstance().ShowPanel<Controller>("Controller", E_UI_Layer.Mid, null);
             UIManager.GetInstance().ShowPanel<SettingsPanel>("Settings", E_UI_Layer.Mid, null);
             UIManager.GetInstance().ShowPanel<InfoPanel>("Info", E_UI_Layer.Mid, null);
+            MusicMgr.GetInstance().PlayBMusic("BK4");
         }
         //----------------------------------------------------
         //再初始化角色和NPC

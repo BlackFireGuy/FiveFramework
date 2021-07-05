@@ -45,7 +45,7 @@ public class RoomGenerator : MonoBehaviour
     float maxX;
     float maxY;
     Vector3 transformCenter;
-
+    bool isRewardPanelShow;
     void Start()
     {
         for (int i = 0; i < roomNumber; i++)
@@ -92,8 +92,13 @@ public class RoomGenerator : MonoBehaviour
         //Boss死亡
         if (GameManager.instance.isBossDead)
         {
-            endRoom.GetComponent<Room>().existdoor.SetActive(true);
-            UIManager.GetInstance().ShowPanel<FlagReward>("FlagReward", E_UI_Layer.Top,null);
+            if (!isRewardPanelShow)
+            {
+                endRoom.GetComponent<Room>().existdoor.SetActive(true);
+                UIManager.GetInstance().ShowPanel<FlagReward>("FlagReward", E_UI_Layer.Mid, null);
+                isRewardPanelShow = true;
+            }
+            
         }
     }
 
